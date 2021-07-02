@@ -1,0 +1,131 @@
+// .hero-slider{
+//    &::after{
+//       position: absolute;
+//       left: 19px;
+//       top: 3px;
+//       content: "ddbfsfb"; 
+//       width: 80px;
+//       height: 2px;
+//       opacity: 0.7;
+//       background-color: #f1ebe7;
+//     }
+//     &::before{
+//       position: absolute;
+//       right: 19px;
+//       top: 3px;
+//       content: "vrsetb"; 
+//       width: 80px;
+//       height: 2px;
+//       opacity: 0.7;
+//       background-color: #f1ebe7;
+//     }
+// }
+.hero-slider__item{
+    position: relative;
+    min-height: 400px;
+}
+.hero-content-wrap{
+    max-width: 800px;
+    position: absolute;
+    left: calc( 50% - 400px);
+    top: calc( 50% - 200px);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.title-holder{
+    margin: 0 auto;
+    padding: 45px 0;
+    font-size: 72px;
+    .title{
+        font-family: var(--base-font-family);
+        font-size: 72px;
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: 7.2px;
+        margin: 0;
+    }
+
+}
+.hero-description{
+  position: relative;
+  margin: 47px 0 68px 0;
+  width: 580px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 1.71; 
+  letter-spacing: normal;
+  text-align: center;
+  opacity: 0.7;
+  p{
+    text-align: center;
+    margin:0
+  }
+}
+.img-wrap{
+  position: relative;
+
+}
+.img-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-color: #000000;
+  z-index: 1;
+}
+.slide{
+  object-fit: contain;
+}
+.hero-slogan{
+  font-family: 'Source Sans Pro';
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  margin: 0 auto;
+}
+.buttons-wrap{
+  display: flex;
+  justify-content: center;
+  :first-child{
+    margin-right: 30px;
+  }
+}
+.line-dot-wrap{
+  padding-top: 3px;
+  margin: 0 auto;
+  width: fit-content;
+  height: 10px;
+  .dot{
+    width: 8px;
+    height: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position: relative;
+    &::after{
+      position: absolute;
+      left: 19px;
+      top: 3px;
+      content: ""; 
+      width: 80px;
+      height: 2px;
+      opacity: 0.7;
+      background-color: #f1ebe7;
+    }
+    &::before{
+      position: absolute;
+      right: 19px;
+      top: 3px;
+      content: ""; 
+      width: 80px;
+      height: 2px;
+      opacity: 0.7;
+      background-color: #f1ebe7;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<section class="hero-section">
+  <div class="hero-slider">
+    <div class="hero-slider__item">
+      <div class="img-wrap">
+        <img [class]="slide"
+          srcset="../../images/put-your-image.png, ../../images/put-your-image@2x.png 1.5x, ../../images/put-your-image@3x.png 2x"
+          src="put-your-image@3x.png" alt="Elva dressed as a fairy">
+      </div>
+      <div class="hero-content-wrap">
+        <div class="hero-slogan">
+          Our Clients Are Our First Priority
+        </div>
+        <div class="title-holder">
+          <h1 class="title">WELCOME TO BINO</h1>
+        </div>
+        <div class="line-dot-wrap">
+          <div class="dot"></div>
+        </div>
+        <div class="hero-description">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+            type specimen
+            book.</p>
+        </div>
+        <div class="buttons-wrap">
+          @@include('../partials/components/buttons/btn-cta.html', {
+          "title": "GET STARTED NOW",
+
+          })
+          @@include('../partials/components/buttons/btn-cta.html', {
+          "title": "LEARN MORE",
+            
+          })
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('../partials/components/buttons/arrow-btn.html', {
+  })
+  @@include('../partials/components/buttons/arrow-btn.html', {
+  "class": "arrow-btn--right"
+  })
+</section>
