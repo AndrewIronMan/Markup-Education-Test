@@ -83,5 +83,5 @@ module.exports = {
   },
   isFixJs() {
     return process.argv[process.argv.length - 1] === this.task.fixJs;
-  }
+  },
 };
