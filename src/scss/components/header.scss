@@ -1,0 +1,33 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+.logo img {
+  position: absolute;
+  z-index: 5;
+}
+nav {
+}
+.ul-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 730px;
+  min-height: 52px;
+  margin: 0;
+  li {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    padding-bottom: 22px;
+    font-weight: normal;
+    z-index: 5;
+    list-style: none;
+    color: #f4f5f9;
+    border-bottom: 1px solid inherit;
+    cursor: pointer;
+    &:hover {
+         color: #e74c3c;
+     border-bottom: solid 2px #e74c3c;
+    }
+  }
+}
