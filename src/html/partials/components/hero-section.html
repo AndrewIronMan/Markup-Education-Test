@@ -1,44 +1,107 @@
 <section class="hero-section">
+  @@include('../partials/components/header.html')
   <div class="hero-slider">
-    <div class="hero-slider__item">
-      <div class="img-wrap">
-        <img [class]="slide"
-          srcset="../../images/put-your-image.png, ../../images/put-your-image@2x.png 1.5x, ../../images/put-your-image@3x.png 2x"
-          src="put-your-image@3x.png" alt="Elva dressed as a fairy">
-      </div>
-      <div class="hero-content-wrap">
-        <div class="hero-slogan">
-          Our Clients Are Our First Priority
+    <div [data-slic]="{'slidesToShow': 4, 'slidesToScroll': 4 . 'arrows': true }" class="hero-slider__item">
+      <!-- <div > -->
+        <div>
+          <h3>1</h3>
         </div>
-        <div class="title-holder">
-          <h1 class="title">WELCOME TO BINO</h1>
+        <div>
+          <h3>2</h3>
         </div>
-        <div class="line-dot-wrap">
-          <div class="dot"></div>
+        <div>
+          <h3>3</h3>
         </div>
-        <div class="hero-description">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-            type specimen
-            book.</p>
+        <div>
+          <h3>4</h3>
         </div>
-        <div class="buttons-wrap">
-          @@include('../partials/components/buttons/btn-cta.html', {
-          "title": "GET STARTED NOW",
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      <!-- </div> -->
 
-          })
-          @@include('../partials/components/buttons/btn-cta.html', {
-          "title": "LEARN MORE",
-            
-          })
+
+
+      <div class="img-wrap">
+        <img class="slide" srcset="
+              ../../images/put-your-image.png,
+              ../../images/put-your-image@2x.png 1.5x,
+              ../../images/put-your-image@3x.png 2x
+            " src="put-your-image@3x.png" alt="Elva dressed as a fairy" />
+      </div>
+      <div class="layout">
+        <div class="hero-content-wrap">
+
+          <div class="hero-slogan">Our Clients Are Our First Priority</div>
+          <div class="title-holder">
+            <h1 class="title">WELCOME TO BINO</h1>
+          </div>
+          <div class="line-dot-wrap">
+            <div class="dot"></div>
+          </div>
+          <div class="hero-description">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="buttons-wrap">
+            @@include('../partials/components/buttons/btn-cta.html', { "title":
+            "GET STARTED NOW",
+            "href":"https://www.google.com/search?q=get+started+&hl=ru&sxsrf=ALeKk00n2SvC4qWRSIZxSteCBX8noJyC8g%3A1625313914706&ei=elLgYJ_JKr3_7_UPs5uo8AU&oq=get+started+&gs_lcp=Cgdnd3Mtd2l6EAMyAggAMgIIADICCAAyAggAMgUIABDLATICCAAyAggAMgIIADICCAAyBQgAEMsBOgQIIxAnOgoIABCxAxCDARBDOgUIABCxAzoECAAQQzoFCC4QsQM6CAguELEDEJMCOgcIABCxAxBDOggILhCxAxCDAToHCAAQChDLAToICC4QxwEQrwE6BAgAEAo6BggAEAcQHkoECEEYAFCI6gFYiKICYO30BGgAcAJ4AIABhAGIAfEJkgEEMC4xMZgBAKABAaoBB2d3cy13aXrAAQE&sclient=gws-wiz&ved=0ahUKEwif7qKU7sbxAhW9_7sIHbMNCl4Q4dUDCA4&uact=5"
+            })
+            @@include('../partials/components/buttons/btn-cta.html', {
+            "title": "LEARN MORE",
+            "href":"https://www.google.com/search?q=Learn+more&hl=ru&sxsrf=ALeKk00CUpeAYnvCouqEBZmdZA8nZ-fp1A%3A1625313863032&source=hp&ei=RlLgYPKCPK6LlwTX55DwBQ&iflsig=AINFCbYAAAAAYOBgV32qNeLv94E_N48DhKTR_Bi4Pf2c&oq=Learn+more&gs_lcp=Cgdnd3Mtd2l6EAMyAggAMgIIADICCAAyBQgAEMsBMgIIADIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBOgcIIxDqAhAnOggIABCxAxCDAToICC4QsQMQgwE6BQguELEDOgIILjoFCAAQsQM6BAgjECc6CwguELEDEMcBEKMCOggILhCxAxCTAjoICC4QxwEQrwFQp4oCWLuJA2CAkANoBnAAeACAAXiIAd0LkgEENC4xMJgBAKABAaoBB2d3cy13aXqwAQo&sclient=gws-wiz&ved=0ahUKEwjyvc777cbxAhWuxYUKHdczBF4Q4dUDCAc&uact=5"
+            })
+          </div>
         </div>
       </div>
     </div>
   </div>
-  @@include('../partials/components/buttons/arrow-btn.html', {
-  })
-  @@include('../partials/components/buttons/arrow-btn.html', {
-  "class": "arrow-btn--right"
-  })
+  @@include('../partials/components/buttons/arrow-btn.html', { "href":"#" })
+  @@include('../partials/components/buttons/arrow-btn.html', { "class":
+  "arrow-btn--right", "href":"#" })
+  <div class="anchor">
+    <a href="#">
+      <img class="anchor-img" srcset="
+            ../../images/forma-1.png,
+            ../../images/forma-1@2x.png 2x,
+            ../../images/forma-1@3x.png 3x
+          " src="../../images/forma-1@3x.png" alt="Elva dressed as a fairy" />
+    </a>
+  </div>
+  <div class="cards">
+    <div class="layout">
+      @@include('../partials/components/option-card.html', {
+      "src":"../../../images/1.jpg",
+      "alt":"sleek",
+      "title":"SLEEK DESIGN",
+      "body":"Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry."
+      })
+      @@include('../partials/components/option-card.html', {
+      "src":"../../../images/2.jpg",
+      "alt":"sleek",
+      "title":"SLEEK DESIGN",
+      "body":"Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry."
+      })
+      @@include('../partials/components/option-card.html', {
+      "src":"../../../images/3.jpg",
+      "alt":"sleek",
+      "title":"SLEEK DESIGN",
+      "body":"Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry."
+      })
+      @@include('../partials/components/option-card.html', {
+      "src":"../../../images/4.jpg",
+      "alt":"sleek",
+      "title":"SLEEK DESIGN",
+      "body":"Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry."
+      })
+    </div>
+  </div>
 </section>
