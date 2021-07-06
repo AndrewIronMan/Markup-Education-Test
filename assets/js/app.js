@@ -161,55 +161,24 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_dots__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_1__);
 // You can write a call and import your functions in this file.
 //
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
 
  // When DOM is ready
+// $(() => {
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  Object(_modules_dots__WEBPACK_IMPORTED_MODULE_1__["default"])();
-});
-
-/***/ }),
-/* 1 */,
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-// This is an examples of simple export.
-//
-// You can remove or add your own function in this file.
-
-
-var _createCells = function _createCells() {
-  var width = 10;
-  var height = 10;
-  var size = width * height;
-  var html = '<div class="entry-cells">';
-
-  for (var i = 0; i < size; i += 1) {
-    html += "<div class=\"cell cell-".concat(i, "\"></div>");
-  }
-
-  html += '</div>';
-  return html;
-};
-
-var dots = function dots() {
-  var $cnt = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.entry-section');
-
-  var cells = _createCells();
-
-  $cnt.html(cells);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (dots);
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
+    slidesToShow: 1,
+    dots: false,
+    prevArrow: '<button id="prev" type="button" class="arrow-btn "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+    nextArrow: '<button id="next" type="button" class="arrow-btn arrow-btn--right "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>'
+  });
+}); // });
 
 /***/ })
 /******/ ]);

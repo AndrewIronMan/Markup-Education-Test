@@ -3,10 +3,18 @@
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
 import $ from 'jquery';
-
-import dots from './modules/dots';
+import 'slick-carousel/slick/slick';
 
 // When DOM is ready
-$(() => {
-  dots();
+// $(() => {
+$(document).ready(() => {
+  $('.hero-slider').slick({
+    slidesToShow: 1,
+    dots: false,
+    prevArrow:
+      '<button id="prev" type="button" class="arrow-btn "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+    nextArrow:
+      '<button id="next" type="button" class="arrow-btn arrow-btn--right "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+  });
 });
+// });
