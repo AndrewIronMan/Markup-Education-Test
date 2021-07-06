@@ -2,6 +2,27 @@
   position: absolute;
   width: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .header {
+    position: absolute;
+    width: 100%;
+    .layout {
+      margin: 0 auto;
+      max-width: 980px;
+      flex-direction: column;
+      align-items: center;
+      .logo{
+        // display: block;
+     
+        height: 100px;
+        img{
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
 .logo img {
   position: absolute;
   z-index: 5;
@@ -15,19 +36,20 @@ nav {
   min-width: 730px;
   min-height: 52px;
   margin: 0;
+  padding-left:0 ;
   li {
     font-family: 'Open Sans';
     font-size: 14px;
-    padding-bottom: 22px;
+    padding: 14px 0;
     font-weight: normal;
     z-index: 5;
     list-style: none;
     color: #f4f5f9;
-    border-bottom: 1px solid inherit;
+    border-bottom: 2px solid transparent;
     cursor: pointer;
     &:hover {
-         color: #e74c3c;
-     border-bottom: solid 2px #e74c3c;
+      color: #e74c3c;
+      border-bottom: solid 2px #e74c3c;
     }
   }
 }
