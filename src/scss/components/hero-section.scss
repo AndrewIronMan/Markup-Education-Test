@@ -34,7 +34,6 @@
 }
 .hero-slider {
   position: relative;
-  // min-height: 100%;
 }
 .hero-slider__item {
   position: relative;
@@ -153,8 +152,8 @@
   background-color: #f4f5f9;
   margin-bottom: -30px;
   box-shadow: 4px 4px 5px 0px rgba(238, 245, 249, 0.25);
-  top: 91vh;
-  left: 50vw;
+  top: 67%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 5;
   .anchor-img {
@@ -205,9 +204,9 @@
       font-size: 40px;
     }
   }
-  // @media screen and (max-width: 970px) {
-  //   .anchor {
-  //     bottom: 575px;
-  //   }
-  // }
+  @media only screen and (max-width: 700px) {
+    .anchor {
+       top: 61%;
+    }
+  }
 }
