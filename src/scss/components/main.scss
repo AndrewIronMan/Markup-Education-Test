@@ -1,10 +1,14 @@
 // This is the main with imports from components folder.
 
+@import 'header';
 @import 'hero-section';
 @import 'history-section';
+@import 'options-section';
 @import 'services-section';
-@import 'header';
+@import 'tabs-section';
 @import 'buttons/buttons';
 @import 'buttons/arrow-btn';
 @import 'option-card';
+@import 'section-intro';
+
 

@@ -1,0 +1,12 @@
+.options-section{
+  min-height: 435px;
+  position: relative;
+  background-color: #ffffff;
+  padding-top: 115px;
+  .layout {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

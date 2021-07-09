@@ -1,0 +1,57 @@
+.section-intro {
+  .layout {
+    h4 {
+      margin: 30px;
+      font-family: 'Source Sans Pro';
+      font-size: 36px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 3.6px;
+      text-align: center;
+      color: #6a6a6a;
+    }
+    p {
+      font-family: 'Open Sans';
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 2.07;
+      letter-spacing: normal;
+      text-align: center;
+      color: #999999;
+      margin-bottom: 60px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 190px;
+        height: 2px;
+        left: 50%;
+        bottom: -100%;
+        transform: translate(-50%);
+        background: linear-gradient(
+          to right,
+          #999999 0%,
+          #999999 42%,
+          transparent 43%,
+          transparent 58%,
+          #999999 59%,
+          #999999 100%
+        );
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: 50%;
+        bottom: -100%;
+        transform: translate(-39%, 39%);
+        background: #e74c3c;
+        border-radius: 50%;
+      }
+    }
+  }
+}

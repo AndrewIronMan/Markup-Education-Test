@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  min-height: 991px;
+  // min-height: 991px;
   .header {
     margin-top: 40px;
     .layout {
@@ -8,6 +8,47 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+  .anchor {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #f4f5f9;
+    margin-bottom: -30px;
+    box-shadow: 4px 4px 5px 0px rgba(238, 245, 249, 0.25);
+    bottom:3px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    .anchor-img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &::before {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 50vw;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 50vw solid #fff;
+    border-top: 80px solid transparent;
+  }
+  &::after {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 50vw;
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 50vw solid #fff;
+    border-top: 80px solid transparent;
   }
 }
 .slick-slider {
@@ -144,59 +185,6 @@
     }
   }
 }
-.anchor {
-  position: absolute;
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
-  background-color: #f4f5f9;
-  margin-bottom: -30px;
-  box-shadow: 4px 4px 5px 0px rgba(238, 245, 249, 0.25);
-  top: 67%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  .anchor-img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-.cards {
-  min-height: 435px;
-  position: relative;
-  background-color: #ffffff;
-  padding-top: 115px;
-  .layout {
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  &::before {
-    position: absolute;
-    z-index: 5;
-    top: -80px;
-    right: 50vw;
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 50vw solid #fff;
-    border-top: 80px solid transparent;
-  }
-  &::after {
-    z-index: 2;
-    position: absolute;
-    top: -80px;
-    left: 50vw;
-    content: '';
-    width: 0;
-    height: 0;
-    border-right: 50vw solid #fff;
-    border-top: 80px solid transparent;
-  }
-}
 
 @media screen and (max-width: 980px) {
   .title-holder {
@@ -204,9 +192,9 @@
       font-size: 40px;
     }
   }
-  @media only screen and (max-width: 700px) {
-    .anchor {
-       top: 61%;
-    }
-  }
+  // @media only screen and (max-width: 700px) {
+  //   .anchor {
+  //     top: 61%;
+  //   }
+  // }
 }
