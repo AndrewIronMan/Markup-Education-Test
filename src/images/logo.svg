@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="56.5">
+    <path fill="#F4F5F9" fill-rule="evenodd" d="M0 1.499h51.676v52H0v-52z"/>
+    <path fill="none" stroke="#F4F5F9" stroke-width="3" d="M41.954 1.499H141v52H41.954v-52z"/>
+    <text fill="#4A4C55" font-family="Open Sans" font-size="41.538" font-weight="bold" transform="matrix(.86127 0 0 .86667 17.526 42)">
+        B
+    </text>
+    <text fill="#F1EBE7" font-family="Open Sans" font-size="41.538" transform="matrix(.86127 0 0 .86667 65.486 41.5)">
+        INO
+    </text>
+</svg>
