@@ -3,12 +3,12 @@
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
 import $ from 'jquery';
-import 'slick-carousel/slick/slick';
-import _carusels from './modules/_carusel';
-import _tabs from './modules/_tabs';
+
+import carousel from './modules/carousel';
+import filters from './modules/filters';
 // When DOM is ready
 
-$(() => {
-  _carusels();
-  _tabs();
-});
+$(() => $(document).ready(() => {
+  carousel($);
+  filters($);
+}));

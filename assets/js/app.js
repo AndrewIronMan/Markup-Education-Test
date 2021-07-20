@@ -161,68 +161,60 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_carusel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _modules_filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
 // You can write a call and import your functions in this file.
 //
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
 
 
-
  // When DOM is ready
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  Object(_modules_carusel__WEBPACK_IMPORTED_MODULE_2__["default"])();
-
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  return jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+    Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_1__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
+    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
+  });
 });
 
 /***/ }),
 /* 1 */,
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_0__);
 // This is an examples of simple export.
 //
 // You can remove or add your own function in this file.
 
 
-var _carusels = function _carusels() {
-  return jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
-      slidesToShow: 1,
-      dots: false,
-      prevArrow: '<button id="prev" type="button" class="arrow-btn "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
-      nextArrow: '<button id="next" type="button" class="arrow-btn arrow-btn--right "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>'
-    }), jquery__WEBPACK_IMPORTED_MODULE_0___default()('.content-slider').slick({
-      slidesToShow: 1,
-      dots: true,
-      arrows: false,
-      vertical: true,
-      verticalSwiping: true
-    });
+var carousel = function carousel($) {
+  $('.hero-slider').slick({
+    prevArrow: '<button id="prev" type="button" class="arrow-btn "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+    nextArrow: '<button id="next" type="button" class="arrow-btn arrow-btn--right "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>'
+  });
+  $('.content-slider').slick({
+    dots: true,
+    arrows: false,
+    vertical: true,
+    verticalSwiping: true
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (_carusels);
+/* harmony default export */ __webpack_exports__["default"] = (carousel);
 
 /***/ }),
+/* 3 */,
 /* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _configs_listOfTabsClassNames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
+/* harmony import */ var _configs_listOfTabsClassNames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -234,30 +226,28 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 // You can remove or add your own function in this file.
 
 
-
-var _tabs = function _tabs() {
-  var $filter = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filter');
-  var $tab = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.filter a');
-  var $offers = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.boxGroup .box');
+var filters = function filters($) {
+  var $filter = $('.filter');
+  var $tab = $('.filter a');
+  var $offers = $('.boxGroup .box');
   $filter.on('click touch', '.all', function (e) {
     e.preventDefault();
     $tab.removeClass('current');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('current');
+    $(this).addClass('current');
     $offers.hide();
     $offers.fadeIn(700);
   });
 
-  var _iterator = _createForOfIteratorHelper(_configs_listOfTabsClassNames__WEBPACK_IMPORTED_MODULE_1__["default"]),
+  var _iterator = _createForOfIteratorHelper(_configs_listOfTabsClassNames__WEBPACK_IMPORTED_MODULE_0__["default"]),
       _step;
 
   try {
     var _loop = function _loop() {
       var className = _step.value;
-      console.log(".".concat(className));
       $filter.on('click touch', ".".concat(className), function (e) {
         e.preventDefault();
         $tab.removeClass('current');
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('current');
+        $(this).addClass('current');
         $offers.show();
         $offers.fadeOut(400);
         $offers.filter(".".concat(className)).fadeIn(400);
@@ -274,7 +264,7 @@ var _tabs = function _tabs() {
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (_tabs);
+/* harmony default export */ __webpack_exports__["default"] = (filters);
 
 /***/ }),
 /* 5 */
@@ -282,7 +272,7 @@ var _tabs = function _tabs() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (['PRINT-DESIGN', 'ANIMATION', 'WEB-DESIGN', 'PHOTOGRAPHY', 'VIDEO', 'ART']);
+/* harmony default export */ __webpack_exports__["default"] = (['print-design', 'animation', 'web-design', 'photography', 'video', 'art']);
 
 /***/ })
 /******/ ]);

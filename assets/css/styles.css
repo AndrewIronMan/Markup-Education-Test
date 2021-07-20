@@ -85,6 +85,7 @@ body {
   background: var(--base-background-color);
   font: var(--base-font-size)/var(--base-line-height) var(--base-font-family);
   min-width: var(--base-min-width);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -776,7 +777,7 @@ input[type=submit] {
   color: #e74c3c;
 }
 
-.boxGroup {
+.box-group {
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -784,15 +785,15 @@ input[type=submit] {
   flex-wrap: wrap;
 }
 
-.boxGroup div {
+.box-group div {
   max-width: 475px;
   max-height: 474px;
   position: relative;
 }
-.boxGroup div img {
+.box-group div img {
   width: 100%;
 }
-.boxGroup div:hover:after {
+.box-group div:hover:after {
   content: "";
   position: absolute;
   left: 0;
