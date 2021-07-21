@@ -4,13 +4,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-
- 
   .service-img {
     width: 47%;
-    .slide {
-      //       width: 40%
-    }
   }
 }
 .content-slider {
@@ -28,12 +23,12 @@
       border-right: solid 1px transparent;
     }
     .slick-active {
-      color: #e74c3c;
-      background-color: #e74c3c;
+      color: var(--color-red);
+      background-color: var(--color-red);
       button {
-        border-left: solid 1px #e74c3c;
-        border-right: solid 1px #e74c3c;
-        background-color: #e74c3c;
+        border-left: solid 1px var(--color-red);
+        border-right: solid 1px var(--color-red);
+        background-color: var(--color-red);
       }
     }
     button {
@@ -63,16 +58,12 @@
           align-items: flex-end;
           padding: 150px 80px 148px 0;
           background-color: #202020;
-          .h3-wrap {
+          .title-container {
             padding-right: 30px;
-            border-right: 6px solid #e74c3c;
-            h3 {
+            border-right: 6px solid var(--color-red);
+            .content-title {
               margin: 0;
-              font-family: 'Source Sans Pro';
-              font-size: 36px;
-              font-weight: bold;
-              font-style: normal;
-              line-height: normal;
+              font:bold 3.6rem var(--second-font-family);
               letter-spacing: 3.6px;
               text-align: right;
               color: #f4f5f9;
@@ -83,25 +74,14 @@
             max-width: 600px;
             position: relative;
             margin-left: 50%;
-            h4 {
-              font-family: 'Open Sans';
-              font-size: 18px;
-              font-weight: 600;
-              font-style: normal;
-              line-height: 1.61;
-              letter-spacing: normal;
+            .section-title {
+              font:600 1.8rem/1.61 var(--first-font-family);
               text-align: right;
-              color: #e74c3c;
+              color: var(--color-red);
             }
             p {
               text-align: right;
-              font-family: 'Source Sans Pro';
-              font-size: 14px;
-              font-weight: normal;
-              font-style: normal;
-              line-height: 2.07;
-              letter-spacing: normal;
-              text-align: right;
+              font: 1.4rem/2.07 var(--second-font-family);
               color: #999999;
             }
             .figure-wrap {
@@ -121,7 +101,6 @@
         }
       }
     }
-
     .content {
       display: flex;
       width: 100%;

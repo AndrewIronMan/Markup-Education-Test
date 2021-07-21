@@ -4,14 +4,14 @@
             <img class="slide" srcset=" 
             images/monitor.png,
             images/monitor@2x.png 2x,
-        " src="images/monitor@2x.png 2x" alt="Our history" />
+        " [src]="images/monitor@2x.png 2x" alt="Our history" />
         </div>
         <div class="history-content-wrap">
-            <div class="h3-wrap">
-                <h3>OUR HISTORY</h3>
+            <div class="title-wrap">
+                <h3 class="title">OUR HISTORY</h3>
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                industry's standard
+                industry"s standard
                 dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to
                 make a type
                 specimen book.
@@ -21,7 +21,7 @@
             <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
                 more recently
                 with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            @@include('../partials/components/buttons/btn-cta.html', { "title":
+            @@include("../partials/components/buttons/btn-cta.html", { "title":
             "BROWSE OUR WORK",
             "class":"cta-btn--red",
             "href":"https://www.google.com/search?q=BROWSE+OUR+WORK&oq=BROWSE+OUR+WORK&aqs=chrome..69i57.576j0j15&sourceid=chrome&ie=UTF-8"

@@ -30,36 +30,35 @@
 
 <body>
   <div class="wrapper">
-    <section class="hero-section">
+    <section id="hero-section" class="hero-section">
       <header class="header">
           <div class="layout">
               <a href="#" class="logo">
-                  <img srcset="
-                  images/logo.png,
-                  images/logo@2x.png 2x,
-                  images/logo@3x.png 3x
-                " src="images/logo.png" alt="Logo">
+                  <img class="slide" srcset="
+                      images/logo.png,
+                      images/logo@2x.png 2x,
+                  " src="images/logo@2x.png 2x" alt="Logo" />
               </a>
               <nav>
-                  <ul class="ul-nav">
-                      <li>HOME</li>
-                      <li>ABOUT US</li>
-                      <li>PORTFOLIO</li>
-                      <li>PRICING</li>
-                      <li>TEAM</li>
-                      <li>BLOG</li>
-                      <li>CONTACT</li>
+                  <ul class="navigation">
+                      <li><a href="#hero-section">HOME</a> </li>
+                      <li><a href="#">ABOUT US</a></li>
+                      <li><a href="#option-section">PORTFOLIO</a></li>
+                      <li><a href="#works-section">PRICING</a></li>
+                      <li><a href="#">TEAM</a></li>
+                      <li><a href="#">BLOG</a></li>
+                      <li><a href="#">CONTACT</a></li>
                   </ul>
               </nav>
           </div>
       </header>
       <div class="hero-slider">
         <div class="hero-slider__item">
-          <div class="img-wrap">
-            <img class="slide" srcset="
+          <div class="bg-container">
+            <img class="bg-img" srcset="
                       images/put-your-image.png,
                       images/put-your-image@2x.png 1.5x,
-                    " src="images/put-your-image.png" alt="Elva dressed as a fairy" />
+                    " [src]="images/put-your-image.png" alt="Elva dressed as a fairy" />
           </div>
           <div class="layout">
             <div class="hero-content-wrap">
@@ -73,7 +72,7 @@
               <div class="hero-description">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry's standard dummy text
+                  industry. Lorem Ipsum has been the industry"s standard dummy text
                   ever since the 1500s, when an unknown printer took a galley of
                   type and scrambled it to make a type specimen book.
                 </p>
@@ -90,11 +89,11 @@
           </div>
         </div>
         <div class="hero-slider__item">
-          <div class="img-wrap">
-            <img class="slide" srcset="
+          <div class="bg-container">
+            <img class="bg-img" srcset="
                   images/put-your-image.png,
                   images/put-your-image@2x.png 1.5x,
-                " src="images/put-your-image@2x.png 1.5x" alt="Elva dressed as a fairy" />
+                " [src]="images/put-your-image@2x.png 1.5x" alt="Elva dressed as a fairy" />
           </div>
           <div class="layout">
             <div class="hero-content-wrap">
@@ -108,7 +107,7 @@
               <div class="hero-description">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry's standard dummy text
+                  industry. Lorem Ipsum has been the industry"s standard dummy text
                   ever since the 1500s, when an unknown printer took a galley of
                   type and scrambled it to make a type specimen book.
                 </p>
@@ -134,39 +133,39 @@
     </section>
     <section id="option-section" class="options-section">
         <div class="layout">
-            <div class="option-card">
-                <div class="figure-wrap">
-                    <img src="images/option-image-1.png" [alt]="sleek">
+            <div  class="option-card">
+                <div class="figure-container">
+                    <img class="figure" src="images/option-image-1.png" [alt]="sleek">
                 </div>
-                <div class="card-content-wrap">
-                    <h4>SLEEK DESIGN</h4>
+                <div class="card-content-row">
+                    <h4 class="title">SLEEK DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.</p>
                 </div>
             </div>
-            <div class="option-card">
-                <div class="figure-wrap">
-                    <img src="images/option-image-2.png" [alt]="sleek">
+            <div  class="option-card">
+                <div class="figure-container">
+                    <img class="figure" src="images/option-image-2.png" [alt]="sleek">
                 </div>
-                <div class="card-content-wrap">
-                    <h4>CLEAN CODE</h4>
+                <div class="card-content-row">
+                    <h4 class="title">CLEAN CODE</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.</p>
                 </div>
             </div>
-            <div class="option-card">
-                <div class="figure-wrap">
-                    <img src="images/option-image-3.png" [alt]="sleek">
+            <div  class="option-card">
+                <div class="figure-container">
+                    <img class="figure" src="images/option-image-3.png" [alt]="sleek">
                 </div>
-                <div class="card-content-wrap">
-                    <h4>CREATIVE IDEAS</h4>
+                <div class="card-content-row">
+                    <h4 class="title">CREATIVE IDEAS</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.</p>
                 </div>
             </div>
-            <div class="option-card">
-                <div class="figure-wrap">
-                    <img src="images/option-image-4.png" [alt]="sleek">
+            <div  class="option-card">
+                <div class="figure-container">
+                    <img class="figure" src="images/option-image-4.png" [alt]="sleek">
                 </div>
-                <div class="card-content-wrap">
-                    <h4>FREE SUPPORT</h4>
+                <div class="card-content-row">
+                    <h4 class="title">FREE SUPPORT</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.</p>
                 </div>
             </div>
@@ -178,14 +177,14 @@
                 <img class="slide" srcset=" 
                 images/monitor.png,
                 images/monitor@2x.png 2x,
-            " src="images/monitor@2x.png 2x" alt="Our history" />
+            " [src]="images/monitor@2x.png 2x" alt="Our history" />
             </div>
             <div class="history-content-wrap">
-                <div class="h3-wrap">
-                    <h3>OUR HISTORY</h3>
+                <div class="title-wrap">
+                    <h3 class="title">OUR HISTORY</h3>
                 </div>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                    industry's standard
+                    industry"s standard
                     dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to
                     make a type
                     specimen book.
@@ -204,30 +203,30 @@
     <section class="services">
         <div class="content-slider">
             <div class="content">
-                <div class="h3-wrap">
-                    <h3>OUR SERVICES</h3>
+                <div class="title-container">
+                    <h3 class="content-title">OUR SERVICES</h3>
                 </div>
                 <div class="section">
-                    <h4>WEB DESIGN</h4>
+                    <h4 class="section-title">WEB DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                        industry's standard
+                        industry"s standard
                         dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/monitor-icon.svg" logo="monitor">
                     </div>
                 </div>
                 <div class="section">
-                    <h4>PRINT DESIGN</h4>
+                    <h4 class="section-title">PRINT DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                        Lorem Ip sum has been the industry"s standard dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/docs-icon.svg" logo="list">
                     </div>
                 </div>
                 <div class="section">
-                    <h4>PHOTOGRAPHY</h4>
+                    <h4 class="section-title">PHOTOGRAPHY</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                        industry's standard
+                        industry"s standard
                         dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/camera-icon.svg" logo="camera">
@@ -235,30 +234,30 @@
                 </div>
             </div>
             <div class="content">
-                <div class="h3-wrap">
-                    <h3>OUR SERVICES</h3>
+                <div class="title-container">
+                    <h3 class="content-title">OUR SERVICES</h3>
                 </div>
                 <div class="section">
-                    <h4>WEB DESIGN</h4>
+                    <h4 class="section-title">WEB DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                        industry's standard
+                        industry"s standard
                         dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/monitor-icon.svg" logo="monitor">
                     </div>
                 </div>
                 <div class="section">
-                    <h4>PRINT DESIGN</h4>
+                    <h4 class="section-title">PRINT DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                        Lorem Ip sum has been the industry"s standard dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/docs-icon.svg" logo="list">
                     </div>
                 </div>
                 <div class="section">
-                    <h4>PHOTOGRAPHY</h4>
+                    <h4 class="section-title">PHOTOGRAPHY</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                        industry's standard
+                        industry"s standard
                         dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/camera-icon.svg" logo="camera">
@@ -266,30 +265,30 @@
                 </div>
             </div>
             <div class="content">
-                <div class="h3-wrap">
-                    <h3>OUR SERVICES</h3>
+                <div class="title-container">
+                    <h3 class="content-title">OUR SERVICES</h3>
                 </div>
                 <div class="section">
-                    <h4>WEB DESIGN</h4>
+                    <h4 class="section-title">WEB DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                        industry's standard
+                        industry"s standard
                         dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/monitor-icon.svg" logo="monitor">
                     </div>
                 </div>
                 <div class="section">
-                    <h4>PRINT DESIGN</h4>
+                    <h4 class="section-title">PRINT DESIGN</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                        Lorem Ip sum has been the industry"s standard dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/docs-icon.svg" logo="list">
                     </div>
                 </div>
                 <div class="section">
-                    <h4>PHOTOGRAPHY</h4>
+                    <h4 class="section-title">PHOTOGRAPHY</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the
-                        industry's standard
+                        industry"s standard
                         dummy text ever.</p>
                     <div class="figure-wrap">
                         <img src="images/camera-icon.svg" logo="camera">
@@ -305,73 +304,69 @@
     <div class="section-intro-works">
       <section class="section-intro">
       <div class="layout">
-        <h4>RECENT WORKS</h4>
+        <h4 class="title">RECENT WORKS</h4>
         <p>It has survived not only five centuries, but also the leap scrambled it to make a type.</p>
       </div>
       </section>
     </div>
-    <section class="tabs-section">
-
+    <section id="works-section" class="works-section">
         <div class="filter">
-            <a class="all current" href="#">All</a>
-            <a class="PRINT-DESIGN" href="#">PRINT DESIGN</a>
-            <a class="animation" href="#">ANIMATION</a>
-            <a class="web-design" href="#">WEB DESIGN</a>
-            <a class="photography" href="#">PHOTOGRAPHY</a>
-            <a class="video" href="#">VIDEO</a>
-            <a class="art" href="#">ART</a>
-
+            <a class="all current" data-filter-nav-type="all" href="#">All</a>
+            <a  data-filter-nav-type="print-design" href="#">PRINT DESIGN</a>
+            <a  data-filter-nav-type="animation" href="#">ANIMATION</a>
+            <a  data-filter-nav-type="web-design" href="#">web DESIGN</a>
+            <a  data-filter-nav-type="photography" href="#">PHOTOGRAPHY</a>
+            <a  data-filter-nav-type="video" href="#">VIDEO</a>
+            <a  data-filter-nav-type="art" href="#">ART</a>
         </div>
-
-
         <div class="box-group">
-            <div class="box web-design">
+            <div class="box" data-filter-type="web-design">
                 <img class="anchor-img" srcset="
                     images/work-1.png,
                     images/work-1@2x.png 2x
-                    "src="images/work-1@2x.png 2x" alt="Web design" />
+                    "[src]="images/work-1@2x.png 2x" alt="Web design" />
             </div>
-            <div class="box print-design">
+            <div class="box" data-filter-type="print-design">
                 <img class="anchor-img" srcset="
                     images/work-2.png,
                     images/work-2@2x.png 2x
-                    " src="images/work-2@2x.png 2x" alt="Print design" />
+                    " [src]="images/work-2@2x.png 2x" alt="Print design" />
             </div>
-            <div class="box print-design">
+            <div class="box" data-filter-type="print-design">
                 <img class="anchor-img" srcset="
                     images/work-3.png,
                     images/work-3@2x.png 2x
-                    " src="images/work-3@2x.png 2x" alt="Print design" />
+                    " [src]="images/work-3@2x.png 2x" alt="Print design" />
             </div>
-            <div class="box photography">
+            <div class="box" data-filter-type="photography">
                 <img class="anchor-img" srcset="
                     images/work-4.png,
                     images/work-4@2x.png 2x
-                    " src="images/work-4@2x.png 2x" alt="Photography" />
+                    " [src]="images/work-4@2x.png 2x" alt="Photography" />
             </div>
-            <div class="box art">
+            <div class="box" data-filter-type="art">
                 <img class="anchor-img" srcset="
                     images/work-5.png,
                     images/work-5@2x.png 2x
-                    " src="images/work-5@2x.png 2x" alt="Art" />
+                    " [src]="images/work-5@2x.png 2x" alt="Art" />
             </div>
-            <div class="box print-design">
+            <div class="box" data-filter-type="print-design">
                 <img class="anchor-img" srcset="
                     images/work-6.png,
                     images/work-6@2x.png 2x
-                    " src="images/work-6@2x.png 2x" alt="Print design" />
+                    " [src]="images/work-6@2x.png 2x" alt="Print design" />
             </div>
-            <div class="box animation">
+            <div class="box" data-filter-type="animation">
                 <img class="anchor-img" srcset="
                     images/work-7.png,
                     images/work-7@2x.png 2x
-                    " src="images/work-7@2x.png 2x" alt="Animation" />
+                    " [src]="images/work-7@2x.png 2x" alt="Animation" />
             </div>
-            <div class="box video">
+            <div class="box" data-filter-type="video">
                 <img class="anchor-img" srcset="
                     images/work-8.png,
                     images/work-8@2x.png 2x
-                    " src="images/work-8@2x.png 2x" alt="Video" />
+                    " [src]="images/work-8@2x.png 2x" alt="Video" />
             </div>
         </div>
 
@@ -380,7 +375,7 @@
     <div class="section-intro-study">
       <section class="section-intro">
       <div class="layout">
-        <h4>CASE STUDY</h4>
+        <h4 class="title">CASE STUDY</h4>
         <p>A brief story about how this process works, keep an eye till the end.</p>
       </div>
       </section>
@@ -390,7 +385,7 @@
                     <div class="study-slider">
                         <div class="study-slider-item">
                             <div class="study-slider-item-image-wrap">
-                                <img src="" alt="">
+                                <!-- <img [src]="" alt=""> -->
 
                             </div>
                             <h4></h4>
@@ -403,7 +398,7 @@
                             <img class="anchor-img" srcset="
                             images/put-your-image-2.png,
                             images/put-your-image-2@2x.png 2x"
-                            src="images/put-your-image-2@2x.png 2x" alt="Web design" />
+                            [src]="images/put-your-image-2@2x.png 2x" alt="Web design" />
                         </div>
 
                     </div>
@@ -414,7 +409,7 @@
     <div class="section-intro-pricing">
       <section class="section-intro">
       <div class="layout">
-        <h4>OUR PRICING</h4>
+        <h4 class="title">OUR PRICING</h4>
         <p>A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.</p>
       </div>
       </section>
@@ -424,7 +419,7 @@
     <div class="section-intro-integrations">
       <section class="section-intro">
       <div class="layout">
-        <h4>Great Integrations with Others</h4>
+        <h4 class="title">Great Integrations with Others</h4>
         <p>Suspendisse sed eros mollis, tincidunt felis eget, interdum erat. Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.</p>
       </div>
       </section>
@@ -433,7 +428,7 @@
     <div class="section-intro-blog">
       <section class="section-intro">
       <div class="layout">
-        <h4>OUR BLOG</h4>
+        <h4 class="title">OUR BLOG</h4>
         <p>Suspendisse sed eros mollis, tincidunt felis eget, interdum eratullam sit amet odio.</p>
       </div>
       </section>
@@ -442,7 +437,7 @@
     <div class="section-intro-keep-in-touch">
       <section class="section-intro">
       <div class="layout">
-        <h4>kEEP IN TOUCH</h4>
+        <h4 class="title">kEEP IN TOUCH</h4>
         <p>Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.</p>
       </div>
       </section>

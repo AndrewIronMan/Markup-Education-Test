@@ -53,10 +53,11 @@ $media-expressions: (
   --color-black: rgb(230, 221, 221);
   --color-grey: #999;
   --color-blue: #39f;
+  --color-red: #e74c3c;
 
   // Fonts
-  --font-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  --font-serif: 'Open Sans', Times, Baskerville, Georgia, serif;
+  --first-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  --second-font-family: 'Source Sans Pro', Times, Baskerville, Georgia, serif;
 
   // Body base
   --base-background-color: #fff;

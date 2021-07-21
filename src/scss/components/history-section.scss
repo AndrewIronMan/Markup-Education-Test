@@ -2,53 +2,39 @@
   background-color: #f4f5f9;
   min-height: 690px;
   padding: 152px 0 50px 0;
+    @include media('<widescreen') {
+      padding: 50px 0;
+    }
   .layout {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    @include media('<widescreen') {
+      flex-wrap: wrap;
+      padding: 0 40px;
+    }
     .history-img {
       padding-right: 78px;
+      @include media('<widescreen') {
+        padding-bottom: 50px;
+        padding-right: 0;
+      }
     }
-    .h3-wrap {
-      border-left: 6px solid #e74c3c;
+    .title-wrap {
+      border-left: 6px solid var(--color-red);
       padding-left: 29px;
-      h3 {
+      .title{
         margin-top: 0;
-        font-family: 'Source Sans Pro';
-        font-size: 36px;
-        font-weight: bold;
-        font-style: normal;
-        line-height: normal;
+        font: bold 3.6rem/1.4 var(--second-font-family);
         letter-spacing: 3.6px;
         text-align: left;
         color: #6a6a6a;
       }
     }
     p {
-      font-family: 'Source Sans Pro';
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      line-height: 2;
-      letter-spacing: normal;
+      font: 1.4rem/2 var(--second-font-family);
       text-align: left;
       color: #999999;
-    }
-  }
-}
-
-@media screen and (max-width: 1094px) {
-  .history {
-    .layout {
-        .history-img {
-      padding-bottom: 50px;
-    }
-      flex-wrap: wrap;
-      padding: 0 40px;
-      a{
-        display: block;
-        margin: 0 auto;
-      }
     }
   }
 }

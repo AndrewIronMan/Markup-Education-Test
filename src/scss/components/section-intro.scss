@@ -1,28 +1,18 @@
 .section-intro {
   .layout {
-    h4 {
+    .title {
       margin: 30px;
-      font-family: 'Source Sans Pro';
-      font-size: 36px;
-      font-weight: bold;
-      font-style: normal;
-      line-height: normal;
+      font: bold 3.6rem var(--second-font-family);
       letter-spacing: 3.6px;
       text-align: center;
       color: #6a6a6a;
     }
     p {
-      font-family: 'Open Sans';
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      line-height: 2.07;
-      letter-spacing: normal;
+      font: 1.4rem/2.07 var(--first-font-family);
       text-align: center;
       color: #999999;
       margin-bottom: 60px;
       position: relative;
-
       &:before {
         position: absolute;
         content: '';
@@ -49,7 +39,7 @@
         left: 50%;
         bottom: -100%;
         transform: translate(-39%, 39%);
-        background: #e74c3c;
+        background: var(--color-red);
         border-radius: 50%;
       }
     }

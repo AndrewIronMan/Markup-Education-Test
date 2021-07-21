@@ -18,7 +18,7 @@
     color: #303030;
   }
   &:hover {
-    background-color: #e74c3c;
+    background-color: var(--color-red);
     opacity: 1;
     color: white;
     .fa-angle-left {
@@ -29,9 +29,7 @@
   &--right {
     left: 92vw;
     transform: rotate(180deg);
-  }
-  @media screen and (max-width: 1200px) {
-    &--right {
+    @include media('<widescreen') {
       left: calc(90vw - (1vw * 0.95));
     }
   }
