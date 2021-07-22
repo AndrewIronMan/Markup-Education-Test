@@ -214,53 +214,38 @@ var carousel = function carousel($) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var _this = undefined;
-
-// This is an examples of simple export.
-//
-// You can remove or add your own function in this file.
 var filters = function filters($) {
-  var $filter = $('.filter');
-  var $filterNavElement = $('.filter a');
-  var $works = $('.box-group .box');
-  $filter.on('click touch', '.all', function (e) {
-    e.preventDefault();
-    $filterNavElement.removeClass('current');
-    $(_this).addClass('current');
-    $works.hide();
-    $works.fadeIn(700);
-  }); // const getElemsByDataAttributer = (attr, property) => {
-  //   const t = [];
-  //   document
-  //     .querySelectorAll(`[${attr}]`)
-  //     .forEach((elem) => t.push(elem.dataset[property]));
-  //   return t;
-  // };
-  // const navFilterTypes = getElemsByDataAttributer(
-  //   'data-filter-nav-type',
-  //   'filterNavType',
-  // );
+  var $works = $('[data-filter-type]');
+
+  var setCurrentClass = function setCurrentClass(item, event) {
+    event.preventDefault();
+    $works.fadeOut(100);
+    $('.filter a').removeClass('current');
+    $(item).addClass('current');
+  };
+
+  var showBlock = function showBlock(item) {
+    if (item.dataset.filterNavType !== 'all') {
+      return $works.each(function (_$works, elem) {
+        var $element = $(elem);
+
+        if (elem.dataset.filterType === item.dataset.filterNavType) {
+          return $element.fadeIn(400);
+        }
+
+        return $element.hide();
+      });
+    }
+
+    return $works.fadeIn(400);
+  };
 
   $('[data-filter-nav-type]').each(function (index, item) {
-    console.log(item.dataset.filterNavType);
-  }); // for (const attr of navFilterTypes) {
-  //   $filter.on('click touch', `[data-filter-nav-type=${attr}]`, function (e) {
-  //     e.preventDefault();
-  //     $works.fadeOut(100);
-  //     $filterNavElement.removeClass('current');
-  //     $(this).addClass('current');
-  //     if (attr !== 'all') {
-  //       return $works.each(($works, elem) => {
-  //         const $element = $(elem);
-  //         if (elem.dataset.filterType === attr) {
-  //           return $element.fadeIn(400);
-  //         }
-  //         return $element.hide();
-  //       });
-  //     }
-  //     return $works.fadeIn(400);
-  //   });
-  // }
+    $('.filter').on('click touch', "[data-filter-nav-type=".concat(item.dataset.filterNavType, "]"), function (e) {
+      setCurrentClass(item, e);
+      showBlock(item);
+    });
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (filters);

@@ -28,31 +28,32 @@
     }
   }
 }
+
 .box-group {
   margin: 0 auto;
   text-align: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-.box-group {
-  max-width: 475px;
-  max-height: 474px;
+  .box {
+    max-width: 475px;
+    max-height: 474px;
 
-  position: relative;
-  img {
-    width: 100%;
-  }
-  &:hover {
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      opacity: 0.8;
-      background-color: var(--color-red);
+    position: relative;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.8;
+        background-color: var(--color-red);
+      }
     }
   }
 }
