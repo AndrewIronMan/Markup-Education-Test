@@ -216,12 +216,6 @@ var carousel = function carousel($) {
 __webpack_require__.r(__webpack_exports__);
 var _this = undefined;
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 // This is an examples of simple export.
 //
 // You can remove or add your own function in this file.
@@ -235,54 +229,38 @@ var filters = function filters($) {
     $(_this).addClass('current');
     $works.hide();
     $works.fadeIn(700);
-  });
+  }); // const getElemsByDataAttributer = (attr, property) => {
+  //   const t = [];
+  //   document
+  //     .querySelectorAll(`[${attr}]`)
+  //     .forEach((elem) => t.push(elem.dataset[property]));
+  //   return t;
+  // };
+  // const navFilterTypes = getElemsByDataAttributer(
+  //   'data-filter-nav-type',
+  //   'filterNavType',
+  // );
 
-  var getElemsByDataAttributer = function getElemsByDataAttributer(attr, property) {
-    var t = [];
-    document.querySelectorAll("[".concat(attr, "]")).forEach(function (elem) {
-      return t.push(elem.dataset[property]);
-    });
-    return t;
-  };
-
-  var navFilterTypes = getElemsByDataAttributer('data-filter-nav-type', 'filterNavType');
-
-  var _iterator = _createForOfIteratorHelper(navFilterTypes),
-      _step;
-
-  try {
-    var _loop = function _loop() {
-      var attr = _step.value;
-      $filter.on('click touch', "[data-filter-nav-type=".concat(attr, "]"), function (e) {
-        e.preventDefault();
-        $works.fadeOut(100);
-        $filterNavElement.removeClass('current');
-        $(this).addClass('current');
-
-        if (attr !== 'all') {
-          return $works.each(function ($works, elem) {
-            var $element = $(elem);
-
-            if (elem.dataset.filterType === attr) {
-              return $element.fadeIn(400);
-            }
-
-            return $element.hide();
-          });
-        }
-
-        return $works.fadeIn(400);
-      });
-    };
-
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      _loop();
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
+  $('[data-filter-nav-type]').each(function (index, item) {
+    console.log(item.dataset.filterNavType);
+  }); // for (const attr of navFilterTypes) {
+  //   $filter.on('click touch', `[data-filter-nav-type=${attr}]`, function (e) {
+  //     e.preventDefault();
+  //     $works.fadeOut(100);
+  //     $filterNavElement.removeClass('current');
+  //     $(this).addClass('current');
+  //     if (attr !== 'all') {
+  //       return $works.each(($works, elem) => {
+  //         const $element = $(elem);
+  //         if (elem.dataset.filterType === attr) {
+  //           return $element.fadeIn(400);
+  //         }
+  //         return $element.hide();
+  //       });
+  //     }
+  //     return $works.fadeIn(400);
+  //   });
+  // }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (filters);

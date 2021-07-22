@@ -4,29 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .card-content-row {
-    .title {
-      font:600 1.8rem/1.4 var(--first-font-family);
-      text-align: center;
-      color: #6a6a6a;
-      margin-bottom: 40px;
-    }
-    p {
-      font: 300 1.2rem/1.67 var(--second-font-family);
-      letter-spacing: 0.9px;
-      text-align: center;
-      color: #999999;
-    }
-    &:before {
-      position: absolute;
-      width: 41px;
-      content: '';
-      left: 104px;
-      bottom: 90px;
-      border-radius: 5px;
-      border: solid 1px #6a6a6a;
-    }
-  }
   &:hover {
     .figure-container {
       border: solid 1px var(--color-red);
@@ -39,18 +16,41 @@
       color: var(--color-red);
     }
   }
-  .figure-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 73px;
-    height: 73px;
-    border: solid 1px #999999;
+}
+.card-content-row {
+  &:before {
+    position: absolute;
+    width: 41px;
+    content: '';
+    left: 104px;
+    bottom: 90px;
+    border-radius: 5px;
+    border: solid 1px #6a6a6a;
+  }
+  .title {
+    font: 600 1.8rem/1.4 var(--first-font-family);
+    text-align: center;
+    color: #6a6a6a;
+    margin-bottom: 40px;
+  }
+  p {
+    font: 300 1.2rem/1.67 var(--second-font-family);
+    letter-spacing: 0.9px;
+    text-align: center;
+    color: #999999;
+  }
+}
+.figure-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 73px;
+  height: 73px;
+  border: solid 1px #999999;
+  transition: transform 0.3s;
+  .figure {
+    display: block;
+    margin: 0 auto;
     transition: transform 0.3s;
-    .figure {
-      display: block;
-      margin: 0 auto;
-      transition: transform 0.3s;
-    }
   }
 }

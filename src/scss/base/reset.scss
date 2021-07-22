@@ -22,11 +22,11 @@ body {
 }
 
 // adaptive images
-// img {
-//   min-width: 100%;
-//   min-height: 1px;
-//   height: auto;
-// }
+img {
+  max-width: 100%;
+  min-height: 1px;
+  height: auto;
+}
 h1{
   margin: 0;
 }

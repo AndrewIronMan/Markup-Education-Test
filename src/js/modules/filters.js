@@ -13,36 +13,40 @@ const filters = ($) => {
     $works.hide();
     $works.fadeIn(700);
   });
-  const getElemsByDataAttributer = (attr, property) => {
-    const t = [];
-    document
-      .querySelectorAll(`[${attr}]`)
-      .forEach((elem) => t.push(elem.dataset[property]));
-    return t;
-  };
-  const navFilterTypes = getElemsByDataAttributer(
-    'data-filter-nav-type',
-    'filterNavType',
-  );
+  // const getElemsByDataAttributer = (attr, property) => {
+  //   const t = [];
+  //   document
+  //     .querySelectorAll(`[${attr}]`)
+  //     .forEach((elem) => t.push(elem.dataset[property]));
+  //   return t;
+  // };
+  // const navFilterTypes = getElemsByDataAttributer(
+  //   'data-filter-nav-type',
+  //   'filterNavType',
+  // );
 
-  for (const attr of navFilterTypes) {
-    $filter.on('click touch', `[data-filter-nav-type=${attr}]`, function (e) {
-      e.preventDefault();
-      $works.fadeOut(100);
-      $filterNavElement.removeClass('current');
-      $(this).addClass('current');
-      if (attr !== 'all') {
-        return $works.each(($works, elem) => {
-          const $element = $(elem);
-          if (elem.dataset.filterType === attr) {
-            return $element.fadeIn(400);
-          }
-          return $element.hide();
-        });
-      }
-      return $works.fadeIn(400);
-    });
-  }
+  $('[data-filter-nav-type]').each((index, item) => {
+    console.log(item.dataset.filterNavType);
+  });
+
+  // for (const attr of navFilterTypes) {
+  //   $filter.on('click touch', `[data-filter-nav-type=${attr}]`, function (e) {
+  //     e.preventDefault();
+  //     $works.fadeOut(100);
+  //     $filterNavElement.removeClass('current');
+  //     $(this).addClass('current');
+  //     if (attr !== 'all') {
+  //       return $works.each(($works, elem) => {
+  //         const $element = $(elem);
+  //         if (elem.dataset.filterType === attr) {
+  //           return $element.fadeIn(400);
+  //         }
+  //         return $element.hide();
+  //       });
+  //     }
+  //     return $works.fadeIn(400);
+  //   });
+  // }
 };
 
 export default filters;

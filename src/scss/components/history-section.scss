@@ -2,12 +2,11 @@
   background-color: #f4f5f9;
   min-height: 690px;
   padding: 152px 0 50px 0;
-    @include media('<widescreen') {
-      padding: 50px 0;
-    }
+  @include media('<widescreen') {
+    padding: 50px 0;
+  }
   .layout {
     display: flex;
-    margin: 0 auto;
     justify-content: center;
     @include media('<widescreen') {
       flex-wrap: wrap;
@@ -15,6 +14,7 @@
     }
     .history-img {
       padding-right: 78px;
+      flex-shrink: 0;
       @include media('<widescreen') {
         padding-bottom: 50px;
         padding-right: 0;
@@ -23,7 +23,7 @@
     .title-wrap {
       border-left: 6px solid var(--color-red);
       padding-left: 29px;
-      .title{
+      .title {
         margin-top: 0;
         font: bold 3.6rem/1.4 var(--second-font-family);
         letter-spacing: 3.6px;

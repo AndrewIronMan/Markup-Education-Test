@@ -1,47 +1,62 @@
 .section-intro {
-  .layout {
-    .title {
-      margin: 30px;
-      font: bold 3.6rem var(--second-font-family);
-      letter-spacing: 3.6px;
-      text-align: center;
-      color: #6a6a6a;
+  margin-top: 150px;
+  font: 1.4rem/2.07 var(--first-font-family);
+  text-align: center;
+  color: #999999;
+  .title {
+    margin: 30px;
+    font: bold 3.6rem var(--second-font-family);
+    letter-spacing: 3.6px;
+    text-align: center;
+    color: #6a6a6a;
+  }
+  .paragraph {
+    font: 1.4rem/2.07 var(--first-font-family);
+    text-align: center;
+    color: #999999;
+    margin-bottom: 60px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 190px;
+      height: 2px;
+      left: 50%;
+      bottom: -100%;
+      transform: translate(-50%);
+      background: linear-gradient(
+        to right,
+        #999999 0%,
+        #999999 42%,
+        transparent 43%,
+        transparent 58%,
+        #999999 59%,
+        #999999 100%
+      );
     }
-    p {
-      font: 1.4rem/2.07 var(--first-font-family);
-      text-align: center;
-      color: #999999;
-      margin-bottom: 60px;
-      position: relative;
-      &:before {
-        position: absolute;
-        content: '';
-        width: 190px;
-        height: 2px;
-        left: 50%;
-        bottom: -100%;
-        transform: translate(-50%);
-        background: linear-gradient(
-          to right,
-          #999999 0%,
-          #999999 42%,
-          transparent 43%,
-          transparent 58%,
-          #999999 59%,
-          #999999 100%
-        );
-      }
-      &:after {
-        position: absolute;
-        content: '';
-        width: 8px;
-        height: 8px;
-        left: 50%;
-        bottom: -100%;
-        transform: translate(-39%, 39%);
-        background: var(--color-red);
-        border-radius: 50%;
-      }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 8px;
+      left: 50%;
+      bottom: -100%;
+      transform: translate(-39%, 39%);
+      background: var(--color-red);
+      border-radius: 50%;
     }
   }
 }
+
+// .info {
+//   &-boxes {
+//   }
+//   &-box {
+//     &-content {
+//     }
+//   }
+//   &-image {
+//   }
+//   &-content {
+//   }
+// }
