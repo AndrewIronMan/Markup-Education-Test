@@ -1,26 +1,29 @@
-const filters = ($) => {
-  // defaultValue
-
+const filters = ($, defaultValue) => {
   const $works = $('[data-filter-type]');
   const $filters = $('[data-filter-nav-type]');
 
+  // CALLBACK THAT WILL BE FIRED ON CLICK ON ELEMENT NAV
   const setCurrentClass = (item, event) => {
     event.preventDefault();
     $works.hide();
     $filters.removeClass('current');
     $(item).addClass('current');
   };
-  // const setDefaultCurrentClass = (dataAttrDefault) => {
-  //   if (dataAttrDefault) {
-  //     const $element = $(`[data-filter-nav-type=${dataAttrDefault}]`);
-  //     if (!dataAttrDefault && $element.length === 0) {
-  //       return $('[data-filter-nav-type=all]').addClass('current');
-  //     }
-  //     $element.addClass('current');
-  //     $element.click();
-  //   }
-  //   return $('[data-filter-nav-type=all]').addClass('current');
-  // };
+  // SET CLASS 'CURRENT' ON ELEMENT NAVIGATION BY DEFAULT
+  const setDefaultCurrentClass = (dataAttrDefault) => {
+    const defaultElementActive = () => $('[data-filter-nav-type=all]').addClass('current');
+    if (dataAttrDefault) {
+      const $element = $(`[data-filter-nav-type=${dataAttrDefault}]`);
+      if (!dataAttrDefault || $element.length === 0) {
+        return defaultElementActive();
+      }
+      $element.addClass('current');
+      $element.click();
+      return null;
+    }
+    return defaultElementActive();
+  };
+  // GET CARD SHOWN BY CONDITION
   const showBlock = (item) => {
     if (item.dataset.filterNavType !== 'all') {
       return $works.each((_$works, elem) => {
@@ -33,6 +36,7 @@ const filters = ($) => {
     }
     return $works.fadeIn(400);
   };
+  // ATTACHING FUNCTIONALITY ON CLICK TO ELEMENT NAVIGATION
   if ($works.length && $filters.length) {
     $filters.each((_index, item) => {
       $(item).on('click touch', (e) => {
@@ -40,10 +44,9 @@ const filters = ($) => {
         showBlock(item);
       });
     });
-    // setDefaultCurrentClass(defaultValue);
+    setDefaultCurrentClass(defaultValue);
     return null;
   }
-  // console.log('HTML elements does not exists! Check it!');
   return null;
 };
 

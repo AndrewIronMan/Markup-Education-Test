@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   return jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_1__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
-    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, 'xfgvbnkfgvmkl');
+    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, 'photography');
   });
 });
 
@@ -203,6 +203,14 @@ var carousel = function carousel($) {
     vertical: true,
     verticalSwiping: true
   });
+  $('.study-slider').slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    speed: 800,
+    // cssEase: 'ease-in-out',
+    touchThreshold: 500
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (carousel);
@@ -214,27 +222,37 @@ var carousel = function carousel($) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var filters = function filters($) {
-  // defaultValue
+var filters = function filters($, defaultValue) {
   var $works = $('[data-filter-type]');
-  var $filters = $('[data-filter-nav-type]');
+  var $filters = $('[data-filter-nav-type]'); // CALLBACK THAT WILL BE FIRED ON CLICK ON ELEMENT NAV
 
   var setCurrentClass = function setCurrentClass(item, event) {
     event.preventDefault();
     $works.hide();
     $filters.removeClass('current');
     $(item).addClass('current');
-  }; // const setDefaultCurrentClass = (dataAttrDefault) => {
-  //   if (dataAttrDefault) {
-  //     const $element = $(`[data-filter-nav-type=${dataAttrDefault}]`);
-  //     if (!dataAttrDefault && $element.length === 0) {
-  //       return $('[data-filter-nav-type=all]').addClass('current');
-  //     }
-  //     $element.addClass('current');
-  //     $element.click();
-  //   }
-  //   return $('[data-filter-nav-type=all]').addClass('current');
-  // };
+  }; // SET CLASS 'CURRENT' ON ELEMENT NAVIGATION BY DEFAULT
+
+
+  var setDefaultCurrentClass = function setDefaultCurrentClass(dataAttrDefault) {
+    var defaultElementActive = function defaultElementActive() {
+      return $('[data-filter-nav-type=all]').addClass('current');
+    };
+
+    if (dataAttrDefault) {
+      var $element = $("[data-filter-nav-type=".concat(dataAttrDefault, "]"));
+
+      if (!dataAttrDefault || $element.length === 0) {
+        return defaultElementActive();
+      }
+
+      $element.addClass('current');
+      $element.click();
+      return null;
+    }
+
+    return defaultElementActive();
+  }; // GET CARD SHOWN BY CONDITION
 
 
   var showBlock = function showBlock(item) {
@@ -251,7 +269,8 @@ var filters = function filters($) {
     }
 
     return $works.fadeIn(400);
-  };
+  }; // ATTACHING FUNCTIONALITY ON CLICK TO ELEMENT NAVIGATION
+
 
   if ($works.length && $filters.length) {
     $filters.each(function (_index, item) {
@@ -259,11 +278,10 @@ var filters = function filters($) {
         setCurrentClass(item, e);
         showBlock(item);
       });
-    }); // setDefaultCurrentClass(defaultValue);
-
+    });
+    setDefaultCurrentClass(defaultValue);
     return null;
-  } // console.log('HTML elements does not exists! Check it!');
-
+  }
 
   return null;
 };

@@ -66,16 +66,3 @@ a {
     }
   }
 }
-@media screen and (min-width: 1200px) {
-  .layout {
-    width: 1170px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .layout {
-    max-width: 980px;
-    margin: 0 auto;
-  }
-}

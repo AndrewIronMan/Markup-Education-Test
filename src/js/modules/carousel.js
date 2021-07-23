@@ -16,6 +16,14 @@ const carousel = ($) => {
     vertical: true,
     verticalSwiping: true,
   });
+  $('.study-slider').slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    speed: 800,
+    // cssEase: 'ease-in-out',
+    touchThreshold: 500,
+  });
 };
 
 export default carousel;
