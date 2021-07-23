@@ -1,3 +1,4 @@
+
 .services {
   min-height: 768px;
   display: flex;
@@ -13,34 +14,33 @@
       display: none;
     }
   }
-  .content-slider {
-    position: relative;
-    @include media('<widescreen') {
-      width: 100%;
-    }
-  }
-  .slick-dots {
-    position: absolute;
-    left: 3%;
-    top: 50%;
-    list-style: none;
-    transform: translateY(-50%);
-    font-size: 0;
-    li {
+}
+.content-slider {
+  position: relative;
+  .slick {
+    &-dots {
+      position: absolute;
+      left: 3%;
+      top: 50%;
+      list-style: none;
+      transform: translateY(-50%);
       font-size: 0;
-      border-left: solid 1px transparent;
-      border-right: solid 1px transparent;
+      li {
+        font-size: 0;
+        border-left: solid 1px transparent;
+        border-right: solid 1px transparent;
+      }
+      button {
+        padding: 0;
+        margin: 5px 0;
+        width: 1px;
+        height: 34px;
+        border: 1px solid;
+        border-color: transparent #999 transparent #999;
+        background: #999999;
+      }
     }
-    button {
-      padding: 0;
-      margin: 5px 0;
-      width: 1px;
-      height: 34px;
-      border: 1px solid;
-      border-color: transparent transparent #999 #999;
-      background: #999999;
-    }
-    .slick-active {
+    &-active {
       color: var(--color-red);
       background-color: var(--color-red);
       button {
@@ -49,69 +49,70 @@
         background-color: var(--color-red);
       }
     }
-  }
-  .slick {
+    &-slide {
+      .content {
+        width: 53%;
+        min-height: 768px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 150px 80px 148px 0;
+        background-color: #202020;
+        @include media('<widescreen') {
+          padding-right: 30%;
+        }
+        .title-container {
+          padding-right: 30px;
+          border-right: 6px solid var(--color-red);
+        }
+        &-title {
+            margin: 0;
+            font: bold 3.6rem var(--second-font-family);
+            letter-spacing: 3.6px;
+            text-align: right;
+            color: #f4f5f9;
+          }
+        .section {
+          margin-top: 68px;
+          max-width: 600px;
+          position: relative;
+          margin-left: 50%;
+          &-title {
+            font: 600 1.8rem/1.61 var(--first-font-family);
+            text-align: right;
+            color: var(--color-red);
+          }
+          p {
+            text-align: right;
+            font: 1.4rem/2.07 var(--second-font-family);
+            color: #999999;
+          }
+          .figure-wrap {
+            position: absolute;
+            right: -110px;
+            top: 25%;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 4px rgba($color: #ffffff, $alpha: 0.15);
+          }
+        }
+      }
+    }
     &-list {
       width: 54vw;
       padding-right: 30px;
       @include media('<widescreen') {
-        width: 100%;
+        width: 100vw;
       }
     }
     &-track {
       display: block;
     }
-  }
-  .content {
-    min-height: 768px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 150px 80px 148px 0;
-    background-color: #202020;
-    @include media('<widescreen') {
-      padding-right: 25%;
-    }
-  }
-}
-.title-container {
-  padding-right: 30px;
-  border-right: 6px solid var(--color-red);
-  .content-title {
-    margin: 0;
-    font: bold 3.6rem var(--second-font-family);
-    letter-spacing: 3.6px;
-    text-align: right;
-    color: #f4f5f9;
-  }
-}
-.section {
-  margin-top: 68px;
-  max-width: 600px;
-  position: relative;
-  margin-left: 30%;
-  .section-title {
-    font: 600 1.8rem/1.61 var(--first-font-family);
-    text-align: right;
-    color: var(--color-red);
-  }
-  p {
-    text-align: right;
-    font: 1.4rem/2.07 var(--second-font-family);
-    color: #999999;
-  }
-  .figure-wrap {
-    position: absolute;
-    right: -110px;
-    top: 25%;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 0 4px rgba($color: #ffffff, $alpha: 0.15);
   }
 }

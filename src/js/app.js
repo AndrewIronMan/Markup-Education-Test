@@ -10,5 +10,5 @@ import filters from './modules/filters';
 
 $(() => $(document).ready(() => {
   carousel($);
-  filters($);
+  filters($, 'xfgvbnkfgvmkl');
 }));

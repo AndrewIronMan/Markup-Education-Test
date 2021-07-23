@@ -5,14 +5,7 @@
   @include media('<widescreen') {
     padding: 50px 0;
   }
-  .layout {
-    display: flex;
-    justify-content: center;
-    @include media('<widescreen') {
-      flex-wrap: wrap;
-      padding: 0 40px;
-    }
-    .history-img {
+  &-img {
       padding-right: 78px;
       flex-shrink: 0;
       @include media('<widescreen') {
@@ -20,7 +13,14 @@
         padding-right: 0;
       }
     }
-    .title-wrap {
+  .layout {
+    display: flex;
+    justify-content: center;
+    @include media('<widescreen') {
+      flex-wrap: wrap;
+      padding: 0 40px;
+    }
+    .title-box {
       border-left: 6px solid var(--color-red);
       padding-left: 29px;
       .title {
@@ -32,7 +32,7 @@
       }
     }
     p {
-      font: 1.4rem/2 var(--second-font-family);
+      font: 1.4rem/2.9rem var(--second-font-family);
       text-align: left;
       color: #999999;
     }

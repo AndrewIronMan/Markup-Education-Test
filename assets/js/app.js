@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   return jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_1__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
-    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
+    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, 'xfgvbnkfgvmkl');
   });
 });
 
@@ -215,14 +215,27 @@ var carousel = function carousel($) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var filters = function filters($) {
+  // defaultValue
   var $works = $('[data-filter-type]');
+  var $filters = $('[data-filter-nav-type]');
 
   var setCurrentClass = function setCurrentClass(item, event) {
     event.preventDefault();
-    $works.fadeOut(100);
-    $('.filter a').removeClass('current');
+    $works.hide();
+    $filters.removeClass('current');
     $(item).addClass('current');
-  };
+  }; // const setDefaultCurrentClass = (dataAttrDefault) => {
+  //   if (dataAttrDefault) {
+  //     const $element = $(`[data-filter-nav-type=${dataAttrDefault}]`);
+  //     if (!dataAttrDefault && $element.length === 0) {
+  //       return $('[data-filter-nav-type=all]').addClass('current');
+  //     }
+  //     $element.addClass('current');
+  //     $element.click();
+  //   }
+  //   return $('[data-filter-nav-type=all]').addClass('current');
+  // };
+
 
   var showBlock = function showBlock(item) {
     if (item.dataset.filterNavType !== 'all') {
@@ -240,12 +253,19 @@ var filters = function filters($) {
     return $works.fadeIn(400);
   };
 
-  $('[data-filter-nav-type]').each(function (index, item) {
-    $('.filter').on('click touch', "[data-filter-nav-type=".concat(item.dataset.filterNavType, "]"), function (e) {
-      setCurrentClass(item, e);
-      showBlock(item);
-    });
-  });
+  if ($works.length && $filters.length) {
+    $filters.each(function (_index, item) {
+      $(item).on('click touch', function (e) {
+        setCurrentClass(item, e);
+        showBlock(item);
+      });
+    }); // setDefaultCurrentClass(defaultValue);
+
+    return null;
+  } // console.log('HTML elements does not exists! Check it!');
+
+
+  return null;
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (filters);

@@ -1,4 +1,4 @@
-// This is base reset for global components.
+﻿// This is base reset for global components.
 //
 // Note: If you use a framework that includes base styling then you need to remove this file.
 
@@ -23,7 +23,7 @@ body {
 
 // adaptive images
 img {
-  max-width: 100%;
+  min-width: 100%;
   min-height: 1px;
   height: auto;
 }
