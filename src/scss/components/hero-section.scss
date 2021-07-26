@@ -1,7 +1,7 @@
 .hero {
   &-section {
     position: relative;
-    max-height: 97vh;
+    // max-height: 97vh;
     &::before {
       position: absolute;
       z-index: 5;
