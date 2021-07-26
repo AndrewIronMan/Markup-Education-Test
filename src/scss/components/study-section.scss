@@ -2,17 +2,33 @@
   width: 100%;
   min-height: 1190px;
   background: #f4f5f9;
+  position: relative;
   .slick {
     &-dots {
       display: flex;
       position: absolute;
       bottom: 110px;
-      left: 260px;
+      // left: 260px;
+      left: 21%;
       z-index: 999;
       @include media('<widescreen') {
-        bottom: 150px;
-        left: 500px;
+        bottom: 195px;
+        left: 43%;
       }
+      @include media('<desktop') {
+        bottom: 195px;
+        left: 40%;
+      }
+      @include media('<tablet') {
+        bottom: 24%;
+        left: 35%;
+      }
+      @include media('<phone') {
+        bottom: 20%;
+        left: 32%;
+      }
+      
+      
       li {
         font-size: 0;
         button {
@@ -33,16 +49,8 @@
     }
   }
 }
-// .study-img {
-//   width: 100%;
-//   -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
-//   transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
-//   -webkit-transform: scale(1.3); /*-webkit-transform: scale(1.2);*/
-//   transform: scale(1.3); /*transform: scale(1.2)*/
-// }
-
 .study-slider-item {
-  display: flex !important;
+  display: flex !important; // discase it. Without !important I couldn't change display inline-block to flex 
   height: 772px;
   align-items: center;
   @include media('<widescreen') {

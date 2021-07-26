@@ -208,7 +208,6 @@ var carousel = function carousel($) {
     arrows: false,
     fade: true,
     speed: 800,
-    // cssEase: 'ease-in-out',
     touchThreshold: 500
   });
 };
