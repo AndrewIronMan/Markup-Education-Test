@@ -12,17 +12,18 @@
     color: #ffffff;
     opacity: 1;
     .counter {
-      font: bold 3rem/3rem var(--second-font-family);
+      font: bold 3rem var(--second-font-family);
+      letter-spacing: 1.5px;
     }
     .info-text {
       text-transform: capitalize;
-      font: 1.8rem/3rem var(--second-font-family);
-      letter-spacing: 1.5px;
+      font: 1.8rem/1.67 var(--second-font-family);
+      letter-spacing: 1px;
     }
   }
   &-icon {
     color: #ffffff;
-    width: 30px;
+    height: 25px;
     background-color: transparent;
   }
 }
@@ -34,4 +35,5 @@
   height: 110px;
   border-radius: 50%;
   border: 1px solid #ffffff;
+  margin-bottom: 50px;
 }
