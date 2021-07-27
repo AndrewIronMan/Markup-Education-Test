@@ -9,8 +9,9 @@
     letter-spacing: 3.6px;
     text-align: center;
     color: #6a6a6a;
+    text-transform: uppercase;
   }
-  .separator{
+  .separator {
     position: relative;
     display: block;
     &:before {
@@ -49,6 +50,5 @@
     color: #999999;
     margin-bottom: 65px;
     position: relative;
-    
   }
 }

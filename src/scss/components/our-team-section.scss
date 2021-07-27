@@ -1,0 +1,40 @@
+﻿.our-team {
+  margin-top: 150px;
+  background-image: url('../../images/team_background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-height: 750px;
+  overflow: hidden;
+  .section-intro {
+    position: absolute;
+    transform: translateY(-10%) translateX(40vw);
+    @include media('<desktop') {
+      transform: translateY(-22%) translateX(35vw);
+    }
+    @include media('<tablet') {
+      transform: translateY(-22%) translateX(25vw);
+    }
+    .title {
+      color: var(--color-white);
+    }
+    .paragraph {
+      color: var(--color-white);
+    }
+  }
+}
+.content-box {
+  min-height: 650px;
+  width: 100%;
+  background-image: url('../../images/curve.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .layout {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    align-items: center;
+  }
+}
+
