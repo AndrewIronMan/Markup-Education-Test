@@ -49,4 +49,16 @@
       }
     }
   }
+  &--gray {
+    background-color: #999999;
+    //  var(--color-red);
+    border-color: #999999;
+    &:hover {
+      // opacity: 0.8;
+      .text {
+        opacity: 1;
+        background-color: var(--color-red);
+      }
+    }
+  }
 }
