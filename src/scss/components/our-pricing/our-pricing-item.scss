@@ -1,13 +1,14 @@
 ﻿.our-pricing-item {
-  width: 380px;
-  margin: 20px 5px;
+  min-width: 350px;
+  max-width: 380px;
+  margin: 20px 10px;
   &-up-bar {
     min-height: 205px;
     padding-top: 50px;
     background: #999999;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     &-title {
       text-transform: uppercase;

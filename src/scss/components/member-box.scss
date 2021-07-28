@@ -5,7 +5,9 @@
   justify-content: space-between;
   padding-top: 110px;
   border-radius: 50%;
-  &:hover {
+  @include media('<widescreen') {
+    justify-content: space-around;
+    padding: 60px 60px 40px ;
     .member-box:before {
       height: 25px;
     }
@@ -20,14 +22,42 @@
       opacity: 1;
     }
   }
+  &:hover {
+    .member-box:before {
+      height: 25px;
+      @include media('<widescreen') {
+        height: 0;
+      }
+    }
+    .member-box:after {
+      opacity: 0.4;
+       @include media('<widescreen') {
+        opacity: 0;
+      }
+    }
+    .member-box {
+      box-shadow: 0 0 5px 10px rgb(24 23 23 / 32%);
+      transform: scale(1.7);
+    }
+    .employee-details {
+      opacity: 1;
+    }
+  }
   &:nth-child(1) {
-    margin-top: 5%;
+    margin-top: 4%;
   }
   &:nth-child(4) {
     margin-top: 8%;
   }
   &:nth-child(5) {
-    margin-top: 10%;
+    margin-top: 12%;
+  }
+  &:nth-child(1),
+  &:nth-child(4),
+  &:nth-child(5) {
+    @include media('<widescreen') {
+      margin: 0;
+    }
   }
   .member-box {
     position: relative;
@@ -81,5 +111,4 @@
       color: var(--color-white);
     }
   }
-
 }

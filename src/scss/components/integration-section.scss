@@ -3,9 +3,12 @@
   padding-bottom: 140px;
 }
 .flex-container {
-  display: flex;
+  display:flex;
+  // display: grid;
+  // grid-template-columns: repeat(5, 1fr);
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  // grid-gap: 30px;
   .bg-img {
     filter: grayscale(100%);
     mix-blend-mode: multiply;
@@ -14,7 +17,8 @@
 .img-box {
   background: var(--color-white);
   min-height: 100px;
-  min-width: 210px;
+  max-width: 210px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

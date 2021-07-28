@@ -1,0 +1,17 @@
+﻿.our-blog {
+  width: 100%;
+  overflow: hidden;
+  .section-intro {
+    padding-top: 50px;
+  }
+  .list-box {
+    background: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    @include media('<widescreen') {
+      flex-direction: column;
+    }
+  }
+}

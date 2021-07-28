@@ -7,28 +7,27 @@
     &-dots {
       display: flex;
       position: absolute;
-      bottom: 110px;
+      bottom: 17%;
       // left: 260px;
       left: 21%;
       z-index: 999;
       @include media('<widescreen') {
-        bottom: 195px;
-        left: 43%;
+        bottom: 32%;
+        left: 42%;
       }
       @include media('<desktop') {
-        bottom: 195px;
-        left: 40%;
+        bottom: 32%;
+        left: 39%;
       }
       @include media('<tablet') {
-        bottom: 24%;
+        bottom: 29%;
         left: 35%;
       }
       @include media('<phone') {
         bottom: 20%;
         left: 32%;
       }
-      
-      
+
       li {
         font-size: 0;
         button {
@@ -50,7 +49,7 @@
   }
 }
 .study-slider-item {
-  display: flex !important; // discase it. Without !important I couldn't change display inline-block to flex 
+  display: flex !important; // discase it. Without !important I couldn't change display inline-block to flex
   height: 772px;
   align-items: center;
   @include media('<widescreen') {

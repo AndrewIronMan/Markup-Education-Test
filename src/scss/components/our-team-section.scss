@@ -6,11 +6,17 @@
   background-position: center center;
   max-height: 750px;
   overflow: hidden;
+  @include media('<desktop') {
+    max-height: unset;
+  }
   .section-intro {
     position: absolute;
-    transform: translateY(-10%) translateX(40vw);
+    transform: translateY(-22%) translateX(40vw);
+    @include media('<widescreen') {
+      transform: translateY(-22%) translateX(34vw);
+    }
     @include media('<desktop') {
-      transform: translateY(-22%) translateX(35vw);
+      transform: translateY(-22%) translateX(27vw);
     }
     @include media('<tablet') {
       transform: translateY(-22%) translateX(25vw);
@@ -25,16 +31,34 @@
 }
 .content-box {
   min-height: 650px;
-  width: 100%;
+  min-width: 100%;
   background-image: url('../../images/curve.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  display: flex;
+  align-items: center;
+  @include media('<widescreen') {
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: unset;
+  }
   .layout {
     display: flex;
-    justify-content: space-between;
-    min-height: 100vh;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    @include media('<widescreen') {
+      margin-top: 220px;
+      margin-bottom: 20px;
+      // padding-bottom: 120px;
+      display: flex;
+      align-items: center;
+      background-image: unset;
+    }
+    @include media('<desktop') {
+      margin-top: 300px;
+      flex-direction: column;
+    }
   }
 }
-

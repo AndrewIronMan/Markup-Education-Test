@@ -3,18 +3,17 @@
 @import 'header';
 @import 'hero-section';
 @import 'history-section';
-@import 'options-section';
+@import 'options/main';
 @import 'services-section';
 @import 'works-section';
 @import 'buttons/main';
-@import 'option-card';
 @import 'section-intro';
 @import 'study-section';
-@import 'about-us-section';
-@import 'about-us-item';
-@import 'our-pricing-section';
-@import 'our-pricing-item';
+@import 'about-us/main';
+@import 'our-pricing/main';
 @import 'our-team-section';
 @import 'member-box';
-@import 'integration-section'
+@import 'integration-section';
+@import 'blog/main';
+
 
