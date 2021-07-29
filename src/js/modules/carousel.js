@@ -15,6 +15,15 @@ const carousel = ($) => {
     arrows: false,
     vertical: true,
     verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+        },
+      },
+    ],
   });
   $('.study-slider').slick({
     dots: true,

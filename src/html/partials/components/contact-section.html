@@ -1,0 +1,49 @@
+<section class="contact">
+  @@include('../partials/components/section-intro.html',{
+  "title":"kEEP IN TOUCH",
+  "body":"Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec."
+  })
+  <div class="layout contact-layout">
+    <div class="contact-info">
+      <div class="contact-info-address">
+        <h4 class="title">OUR ADDRESS</h4>
+        <p>House #13, Streat road,</p>
+        <p>Sydney
+          2310 Australia</p>
+      </div>
+      <div class="contact-info-call-us">
+        <h4 class="title">CALL US</h4>
+        <p>+ 880 168 109 1425</p>
+        <p>+ 0216809142</p>
+      </div>
+      <div class="contact-info-email-us">
+        <h4 class="title">EMAIL US</h4>
+        <p>contactus@email.com</p>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form>
+        <div class="input">
+          <input placeholder="Name" type="text" id="name" name="Name">
+
+        </div>
+        <div class="input">
+
+          <input placeholder="Email" type="Email" id="email" name="Email">
+        </div>
+        <div class="input">
+
+          <input placeholder="Subject" type="text" id="subject" name="subject">
+        </div>
+        <div class="input">
+          <textarea placeholder="Message" id="message" name="message" cols="40" rows="6"></textarea>
+        </div>
+        @@include("../partials/components/buttons/btn-cta.html", { "title":
+        "SEND MESSAGE",
+        "class":"cta-btn--red cta-btn--small",
+        "href":"#"
+        })
+      </form>
+    </div>
+  </div>
+</section>
