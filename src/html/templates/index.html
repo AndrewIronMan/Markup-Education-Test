@@ -5,6 +5,7 @@
 
 <body>
   <div class="wrapper">
+    @@include("../partials/components/header.html")
     @@include('../partials/components/hero-section.html')
     @@include('../partials/components/options/options-section.html')
     @@include('../partials/components/history-section.html')
@@ -24,13 +25,9 @@
     @@include('../partials/components/our-team-section.html')
     @@include('../partials/components/integration-section.html')
     @@include('../partials/components/blog/blog-section.html')
-    <!-- @@include('../partials/components/section-intro.html',{
-    "title":"kEEP IN TOUCH",
-    "body":"Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec."
-    }) -->
     @@include('../partials/components/contact-section.html')
-
-    <div class="footer-section"></div>
+    @@include('../partials/components/footer-section.html')
+    @@include('../partials/components/footer.html')
   </div>
   @@include('../partials/scripts/common.html')
 </body>

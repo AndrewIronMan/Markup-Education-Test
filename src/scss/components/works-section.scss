@@ -1,7 +1,9 @@
 .filter {
   text-align: center;
   margin: 2em auto 5rem;
+  padding: 0 20px;
   a {
+    display: inline-block;
     font: 1.4rem var(--first-font-family);
     color: #999999;
     text-decoration: none;

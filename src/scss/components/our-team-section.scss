@@ -19,7 +19,7 @@
       transform: translateY(-22%) translateX(27vw);
     }
     @include media('<tablet') {
-      transform: translateY(-22%) translateX(25vw);
+      transform: translateY(-22%) translateX(16vw);
     }
     .title {
       color: var(--color-white);
@@ -51,7 +51,6 @@
     @include media('<widescreen') {
       margin-top: 220px;
       margin-bottom: 20px;
-      // padding-bottom: 120px;
       display: flex;
       align-items: center;
       background-image: unset;
