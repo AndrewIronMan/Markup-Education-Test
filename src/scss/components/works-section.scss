@@ -4,25 +4,23 @@
   padding: 0 20px;
   a {
     display: inline-block;
-    font: 1.4rem var(--first-font-family);
-    color: #999999;
+    font: 1.4rem var(--primary-font-family);
+    color: var( --color-grey);
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
     margin: 15px;
     &:after {
+      @include size(1px, 15px);
       position: absolute;
       content: '';
-      width: 1px;
-      height: 15px;
       top: 15%;
       right: -20px;
       transform: rotate(25deg) translate(-50%);
-      background: #999999;
+      background: var( --color-grey);
     }
     &:last-child::after {
-      width: 0;
-      height: 0;
+      @include size(0);
     }
     &.current {
       font-weight: bold;
@@ -40,7 +38,6 @@
   .box {
     max-width: 475px;
     max-height: 474px;
-
     position: relative;
     img {
       width: 100%;

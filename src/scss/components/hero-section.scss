@@ -5,34 +5,28 @@
     @include media('<widescreen') {
       max-height: unset;
     }
-    &::before {
+    &::before,
+    &::after {
+      @include size(0);
       position: absolute;
       z-index: 5;
       bottom: 0;
-      right: 50vw;
       content: '';
-      width: 0;
-      height: 0;
-      border-left: 50vw solid #fff;
       border-top: 80px solid transparent;
     }
+    &::before {
+      right: 50vw;
+      border-left: 50vw solid var(--color-white);
+    }
     &::after {
-      z-index: 2;
-      position: absolute;
-      bottom: 0;
       left: 50vw;
-      content: '';
-      width: 0;
-      height: 0;
-      border-right: 50vw solid #fff;
-      border-top: 80px solid transparent;
+      border-right: 50vw solid var(--color-white);
     }
   }
   &-content-wrap {
-    max-width: 800px;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 43%;
     transform: translate(-50%, -50%);
     z-index: 5;
     display: flex;
@@ -40,19 +34,14 @@
     justify-content: center;
     align-items: center;
     @include media('<widescreen') {
-        top: 45%;
-        padding: 0 40px;
-    }
-     @include media('<desktop') {
-        top: 55%;
-        padding: 0 40px;
+      padding: 0 40px;
     }
   }
   &-description {
     position: relative;
     margin: 47px 0 68px 0;
     width: 580px;
-    font: 1.4rem/2.4rem var(--first-font-family);
+    font: 1.4rem/2.4rem var(--primary-font-family);
     text-align: center;
     opacity: 0.7;
     p {
@@ -61,14 +50,11 @@
     }
   }
   &-slogan {
-    font: 2.4rem var(--second-font-family);
+    font: 2.4rem var(--secondary-font-family);
     letter-spacing: 1.2px;
     margin: 0 auto;
   }
   &-slider {
-    // @include media('<widescreen') {
-    //   margin-top: 50px;
-    // }
     &__item {
       position: relative;
       min-height: 100%;
@@ -76,14 +62,12 @@
   }
 }
 .anchor {
+  @include size(64px);
   position: absolute;
-  height: 64px;
-  width: 64px;
   border-radius: 50%;
-  background-color: #f4f5f9;
-  margin-bottom: -30px;
+  background-color: var(--color-primary-white);
   box-shadow: 4px 4px 5px 0px rgba(238, 245, 249, 0.25);
-  bottom: 3px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -96,7 +80,6 @@
 }
 .slick {
   &-slider {
-    position: relative;
     display: flex;
   }
   &-list {
@@ -121,7 +104,7 @@
   margin: 0 auto;
   padding: 45px 0;
   .title {
-    font: bold 7.2rem var(--first-font-family);
+    font: bold 7.2rem var(--primary-font-family);
     letter-spacing: 7.2px;
     margin: 0;
     text-align: center;
@@ -161,19 +144,17 @@
   width: fit-content;
   height: 10px;
   .dot {
-    width: 8px;
-    height: 8px;
+    @include size(8px);
     background-color: var(--color-red);
     border-radius: 50%;
     position: relative;
     &:after,
     &:before {
+      @include size(100px, 2px);
       position: absolute;
       left: 19px;
       top: 3px;
       content: '';
-      width: 100px;
-      height: 2px;
       opacity: 0.7;
       background-color: #f1ebe7;
     }

@@ -38,10 +38,10 @@ footer {
   }
 }
 .created-by {
-  font: 600 1.4rem/1.71 var(--first-font-family);
+  font: 600 1.4rem/1.71 var(--primary-font-family);
   color: rgba(153, 153, 153, 0.75);
 }
-.go-to-up {
+.go-to-top{
   @include size(53px);
   position: absolute;
   right: 50px;
@@ -51,6 +51,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: transparent;
   .fa-angle-up {
     color: var(--color-white);
     font-size: 24px;

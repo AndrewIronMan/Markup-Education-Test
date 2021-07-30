@@ -1,43 +1,42 @@
 .study-section {
   width: 100%;
   min-height: 1190px;
-  background: #f4f5f9;
+  background: var(--color-primary-white);
   position: relative;
+  padding-bottom: 120px;
   .slick {
     &-dots {
       display: flex;
       position: absolute;
-      bottom: 17%;
-      // left: 260px;
-      left: 21%;
+      justify-content: center;
+      bottom: 20%;
+      left: 32%;
+      margin: 0 auto;
       z-index: 999;
       @include media('<widescreen') {
-        bottom: 32%;
+        bottom: 29%;
         left: 42%;
       }
       @include media('<desktop') {
-        bottom: 32%;
-        left: 39%;
+        left: 41%;
       }
       @include media('<tablet') {
-        bottom: 29%;
         left: 35%;
       }
       @include media('<phone') {
-        bottom: 20%;
-        left: 32%;
+        bottom: 25%;
+        left: 31%;
       }
 
       li {
         font-size: 0;
         button {
+          @include size(12px);
           padding: 0;
           margin: 0 3px;
-          width: 12px;
-          height: 12px;
           border-radius: 50%;
           border: solid 1px transparent;
-          background: #f4f5f9;
+          background: var(--color-primary-white);
         }
       }
       .slick-active {
@@ -57,14 +56,13 @@
   }
   &-title {
     text-transform: uppercase;
-    font: 600 1.8rem var(--first-font-family);
+    font: 600 1.8rem var(--primary-font-family);
     letter-spacing: 1.35px;
-    color: #6a6a6a;
+    color: var(--color-dark-grey);
   }
   &-image-wrap {
+    @include size(90px);
     transform: rotate(45deg);
-    width: 90px;
-    height: 90px;
     background-color: var(--color-red);
     display: flex;
     align-items: center;
@@ -82,20 +80,20 @@
     flex-direction: column;
     align-items: center;
     flex-grow: 0;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     z-index: 5;
     padding: 80px 61px 70px 61px;
   }
   p {
-    font: 300 1.4rem/1.7 var(--second-font-family);
+    font: 300 1.4rem/1.7 var(--secondary-font-family);
     letter-spacing: 1px;
-    color: #999999;
+    color: var( --color-grey);
     margin-bottom: 50px;
   }
   hr {
     size: 2px;
     width: 41px;
-    color: #6a6a6a;
+    color: var(--color-dark-grey);
     margin-bottom: 30px;
   }
 }

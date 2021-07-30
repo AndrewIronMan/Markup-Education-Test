@@ -25,28 +25,27 @@
     left: 104px;
     bottom: 90px;
     border-radius: 5px;
-    border: solid 1px #6a6a6a;
+    border: solid 1px var( --color-dark-grey);
   }
   .title {
-    font: 600 1.8rem/1.4 var(--first-font-family);
+    font: 600 1.8rem/1.4 var(--primary-font-family);
     text-align: center;
-    color: #6a6a6a;
+    color: var(--color-dark-grey);
     margin-bottom: 40px;
   }
   p {
-    font: 300 1.2rem/1.67 var(--second-font-family);
+    font: 300 1.2rem/1.67 var(--secondary-font-family);
     letter-spacing: 0.9px;
     text-align: center;
-    color: #999999;
+    color: var( --color-grey);;
   }
 }
 .figure-container {
+  @include size(73px);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 73px;
-  height: 73px;
-  border: solid 1px #999999;
+  border: solid 1px var( --color-grey);;
   transition: transform 0.3s;
   margin-bottom: 30px;
   .figure {

@@ -1,9 +1,5 @@
 ﻿.our-team {
   margin-top: 150px;
-  background-image: url('../../images/team_background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   max-height: 750px;
   overflow: hidden;
   @include media('<desktop') {
@@ -11,9 +7,9 @@
   }
   .section-intro {
     position: absolute;
-    transform: translateY(-22%) translateX(40vw);
+    transform: translateY(-22%) translateX(39vw);
     @include media('<widescreen') {
-      transform: translateY(-22%) translateX(34vw);
+      transform: translateY(-22%) translateX(32vw);
     }
     @include media('<desktop') {
       transform: translateY(-22%) translateX(27vw);
@@ -32,12 +28,9 @@
 .content-box {
   min-height: 650px;
   min-width: 100%;
-  background-image: url('../../images/curve.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   display: flex;
   align-items: center;
+  background: url('../../images/curve.png') no-repeat 50% 50% / cover;
   @include media('<widescreen') {
     justify-content: space-between;
     align-items: flex-end;

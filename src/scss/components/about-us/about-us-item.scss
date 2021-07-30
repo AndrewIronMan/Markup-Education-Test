@@ -9,20 +9,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;
+    color: var(--color-white);
     opacity: 1;
     .counter {
-      font: bold 3rem var(--second-font-family);
+      font: bold 3rem var(--secondary-font-family);
       letter-spacing: 1.5px;
     }
     .info-text {
       text-transform: capitalize;
-      font: 1.8rem/1.67 var(--second-font-family);
+      font: 1.8rem/1.67 var(--secondary-font-family);
       letter-spacing: 1px;
     }
   }
   &-icon {
-    color: #ffffff;
+    color: var(--color-white);
     height: 25px;
     background-color: transparent;
   }
@@ -34,6 +34,6 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--color-white);;
   margin-bottom: 50px;
 }

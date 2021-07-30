@@ -1,6 +1,5 @@
 .history {
-  background-color: #f4f5f9;
-  min-height: 690px;
+  background-color: var(--color-primary-white);
   padding: 152px 0 50px 0;
   @include media('<widescreen') {
     padding: 50px 0;
@@ -25,16 +24,16 @@
       padding-left: 29px;
       .title {
         margin-top: 0;
-        font: bold 3.6rem/1.4 var(--second-font-family);
+        font: bold 3.6rem/1.4 var(--secondary-font-family);
         letter-spacing: 3.6px;
         text-align: left;
-        color: #6a6a6a;
+        color: var(--color-dark-grey);
       }
     }
     p {
-      font: 1.4rem/2.9rem var(--second-font-family);
+      font: 1.4rem/2.9rem var(--secondary-font-family);
       text-align: left;
-      color: #999999;
+      color: var( --color-grey);
     }
   }
 }

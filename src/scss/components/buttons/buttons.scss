@@ -1,10 +1,10 @@
 .cta-btn {
   display: inline-block;
-  font: bold 1.4rem var(--first-font-family);
-  color: #ffffff;
+  font: bold 1.4rem var(--primary-font-family);
+  color: var(--color-white);
   min-width: 225px;
   padding: 20px;
-  border: solid 1px #ffffff;
+  border: solid 1px var(--color-white);
   background-color: transparent;
   border-radius: 5px;
   text-decoration: none;
@@ -50,11 +50,9 @@
     }
   }
   &--gray {
-    background-color: #999999;
-    //  var(--color-red);
-    border-color: #999999;
+    background-color: var( --color-grey);;
+    border-color: var( --color-grey);;
     &:hover {
-      // opacity: 0.8;
       .text {
         opacity: 1;
         background-color: var(--color-red);

@@ -1,5 +1,4 @@
 .services {
-  min-height: 768px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +24,7 @@
       transform: translateY(-50%);
       font-size: 0;
       @include media('<widescreen') {
-        transform:rotate(-90deg);
+        transform: rotate(-90deg);
         top: unset;
         left: 50%;
         bottom: -5%;
@@ -36,13 +35,12 @@
         border-right: solid 1px transparent;
       }
       button {
+        @include size(1px, 34px);
         padding: 0;
         margin: 5px 0;
-        width: 1px;
-        height: 34px;
         border: 1px solid;
-        border-color: transparent #999 transparent #999;
-        background: #999999;
+        border-color: transparent var(--color-grey) transparent var(--color-grey);
+        background: var( --color-grey);
       }
     }
     &-active {
@@ -57,7 +55,6 @@
     &-slide {
       .content {
         width: 53%;
-        min-height: 768px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -67,16 +64,16 @@
         @include media('<widescreen') {
           padding-right: 30%;
         }
+        &-title {
+          margin: 0;
+          font: bold 3.6rem var(--secondary-font-family);
+          letter-spacing: 3.6px;
+          text-align: right;
+          color: var(--color-primary-white);
+        }
         .title-container {
           padding-right: 30px;
           border-right: 6px solid var(--color-red);
-        }
-        &-title {
-          margin: 0;
-          font: bold 3.6rem var(--second-font-family);
-          letter-spacing: 3.6px;
-          text-align: right;
-          color: #f4f5f9;
         }
         .section {
           margin-top: 68px;
@@ -84,27 +81,26 @@
           position: relative;
           margin-left: 50%;
           &-title {
-            font: 600 1.8rem/1.61 var(--first-font-family);
+            font: 600 1.8rem/1.61 var(--primary-font-family);
             text-align: right;
             color: var(--color-red);
           }
           p {
             text-align: right;
-            font: 1.4rem/2.07 var(--second-font-family);
-            color: #999999;
+            font: 1.4rem/2.07 var(--secondary-font-family);
+            color: var( --color-grey);
           }
           .figure-wrap {
+            @include size(64px);
             position: absolute;
             right: -110px;
             top: 25%;
-            width: 64px;
-            height: 64px;
             border-radius: 50%;
-            background-color: #ffffff;
+            background-color: var(--color-white);
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 0 4px rgba($color: #ffffff, $alpha: 0.15);
+            box-shadow: 0 0 0 4px rgba($color: var(--color-white), $alpha: 0.15);
           }
         }
       }

@@ -1,4 +1,8 @@
 .layout {
   max-width: 1170px;
   margin: 0 auto;
+
+  @include media('<widescreen') {
+    max-width: 980px;
+  }
 }

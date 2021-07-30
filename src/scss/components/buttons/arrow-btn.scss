@@ -1,11 +1,10 @@
 .arrow-btn {
+  @include size(45px);
   z-index: 2;
   display: block;
   position: absolute;
   left: 4vw;
   top: 33%;
-  width: 45px;
-  height: 45px;
   border-radius: 2px;
   color: #39332d;
   border: transparent;

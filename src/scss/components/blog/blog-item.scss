@@ -16,10 +16,9 @@
     width: auto;
     &:before,
     &:after {
+      @include size(0);
       position: absolute;
       content: '';
-      width: 0;
-      height: 0;
       top: 45%;
       border-bottom: 40px solid var(--color-red);
       border-right: 40px solid transparent;
@@ -94,7 +93,7 @@
 
   &-categories {
     a {
-      font: 1.4rem var(--first-font-family);
+      font: 1.4rem var(--primary-font-family);
       letter-spacing: 0.7px;
       color: var(--color-white);
       position: relative;
@@ -118,28 +117,27 @@
     position: relative;
     margin-bottom: 75px;
     a {
-      font: 600 2.4rem var(--second-font-family);
+      font: 600 2.4rem var(--secondary-font-family);
       letter-spacing: 1.2px;
       color: var(--color-white);
       text-decoration: none;
     }
     &:after {
+      @include size(44px, 4px);
       position: absolute;
       content: '';
-      width: 44px;
-      height: 4px;
       background: var(--color-white);
       bottom: -50%;
       left: 0;
     }
   }
   &-box-paragraph {
-    font: 1.6rem/1.88 var(--first-font-family);
+    font: 1.6rem/1.88 var(--primary-font-family);
     color: var(--color-white);
   }
   &-box-more {
     text-decoration: none;
-    font: 600 1.8rem/1.33 var(--first-font-family);
+    font: 600 1.8rem/1.33 var(--primary-font-family);
     font-style: italic;
     color: var(--color-white);
     position: relative;

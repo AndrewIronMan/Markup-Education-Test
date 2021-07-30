@@ -1,5 +1,5 @@
 ﻿.contact {
-  background-color: #f4f5f9;
+  background-color: var(--color-primary-white);
   padding-bottom: 150px;
   &-info,
   &-form {
@@ -18,13 +18,13 @@
       }
     }
     .title {
-      font: 600 2.4rem var(--second-font-family);
+      font: 600 2.4rem var(--secondary-font-family);
       color: var(--color-red);
       margin: 28px 0 28px;
     }
     p {
-      font: 1.8rem/1.33 var(--first-font-family);
-      color: #999999;
+      font: 1.8rem/1.33 var(--primary-font-family);
+      color: var( --color-grey);
     }
   }
   &-form {
@@ -39,33 +39,33 @@
       flex-direction: column;
       input {
         @include placeholder() {
-          color: #999999;
-          font: 600 1.4rem/1.71 var(--first-font-family);
+          color: var( --color-grey);;
+          font: 600 1.4rem/1.71 var(--primary-font-family);
         }
         border-bottom: solid 0.5px;
-        border-color: transparent transparent #999999 transparent;
+        border-color: transparent transparent var( --color-grey) transparent;
         outline: none;
         padding: 19px 19px 19px 0;
-        font: 600 1.4rem/1.71 var(--first-font-family);
-        color: #999999;
+        font: 600 1.4rem/1.71 var(--primary-font-family);
+        color: var( --color-grey);;
         &:focus {
           background-color: transparent;
-          font: 600 1.4rem/1.71 var(--first-font-family);
-          color: #999999;
+          font: 600 1.4rem/1.71 var(--primary-font-family);
+          color: var( --color-grey);;
         }
       }
       textarea {
         border-bottom: solid 0.5px;
-        color: #999999;
-        border-color: transparent transparent #999999 transparent;
+        color: var( --color-grey);;
+        border-color: transparent transparent var( --color-grey) transparent;
         padding: 19px 19px 19px 0;
-        font: 600 1.4rem/1.71 var(--first-font-family);
+        font: 600 1.4rem/1.71 var(--primary-font-family);
         outline: none;
         resize: none;
         margin-bottom: 30px;
         @include placeholder() {
-          color: #999999;
-          font: 600 1.4rem/1.71 var(--first-font-family);
+          color: var( --color-grey);;
+          font: 600 1.4rem/1.71 var(--primary-font-family);
         }
       }
     }
@@ -78,8 +78,4 @@
       align-items: center;
     }
   }
-  // .section-intro{
-  //   padding-left:30px;
-  //   padding-right:30px
-  // }
 }

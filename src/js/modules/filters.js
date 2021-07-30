@@ -1,4 +1,5 @@
-const filters = ($, defaultValue) => {
+// eslint-disable-next-line import/prefer-default-export
+export const filters = ($, defaultValue) => {
   const $works = $('[data-filter-type]');
   const $filters = $('[data-filter-nav-type]');
 
@@ -49,5 +50,3 @@ const filters = ($, defaultValue) => {
   }
   return null;
 };
-
-export default filters;

@@ -1,8 +1,9 @@
 .options-section{
   min-height: 435px;
   position: relative;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding-top: 115px;
+
   .layout {
     display: flex;
     flex-wrap: wrap;

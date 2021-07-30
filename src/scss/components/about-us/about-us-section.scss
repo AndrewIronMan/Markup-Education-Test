@@ -5,8 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../../images/city-scape.png');
-  background-size: cover;
+  
   &::before {
     content: '';
     position: absolute;

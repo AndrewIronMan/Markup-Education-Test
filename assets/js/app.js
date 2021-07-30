@@ -163,18 +163,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _modules_filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _modules_scrollToTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _modules_burgerToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
 // You can write a call and import your functions in this file.
 //
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
 
 
+
+
  // When DOM is ready
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   return jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-    Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_1__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
-    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["default"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, 'photography');
+    Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_1__["carousel"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
+    Object(_modules_filters__WEBPACK_IMPORTED_MODULE_2__["filters"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, 'photography');
+    Object(_modules_scrollToTop__WEBPACK_IMPORTED_MODULE_3__["scrollToTop"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
+    Object(_modules_burgerToggle__WEBPACK_IMPORTED_MODULE_4__["burgerToggle"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
   });
 });
 
@@ -185,12 +191,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "carousel", function() { return carousel; });
 /* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick__WEBPACK_IMPORTED_MODULE_0__);
-// This is an examples of simple export.
-//
-// You can remove or add your own function in this file.
-
+ // eslint-disable-next-line import/prefer-default-export
 
 var carousel = function carousel($) {
   $('.hero-slider').slick({
@@ -219,8 +223,6 @@ var carousel = function carousel($) {
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (carousel);
-
 /***/ }),
 /* 3 */,
 /* 4 */
@@ -228,6 +230,8 @@ var carousel = function carousel($) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filters", function() { return filters; });
+// eslint-disable-next-line import/prefer-default-export
 var filters = function filters($, defaultValue) {
   var $works = $('[data-filter-type]');
   var $filters = $('[data-filter-nav-type]'); // CALLBACK THAT WILL BE FIRED ON CLICK ON ELEMENT NAV
@@ -292,7 +296,39 @@ var filters = function filters($, defaultValue) {
   return null;
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (filters);
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollToTop", function() { return scrollToTop; });
+// eslint-disable-next-line import/prefer-default-export
+var scrollToTop = function scrollToTop($) {
+  $('.go-to-top').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 400);
+  });
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "burgerToggle", function() { return burgerToggle; });
+// eslint-disable-next-line import/prefer-default-export
+var burgerToggle = function burgerToggle($) {
+  var $body = $('body');
+  var $burgerButton = $('.burger');
+  var ACTIVE_CLASS = 'nav-open';
+  $burgerButton.click(function (e) {
+    e.preventDefault();
+    $body.toggleClass(ACTIVE_CLASS);
+  });
+};
 
 /***/ })
 /******/ ]);

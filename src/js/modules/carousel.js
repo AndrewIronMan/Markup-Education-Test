@@ -1,9 +1,7 @@
-// This is an examples of simple export.
-//
-// You can remove or add your own function in this file.
 import 'slick-carousel/slick/slick';
 
-const carousel = ($) => {
+// eslint-disable-next-line import/prefer-default-export
+export const carousel = ($) => {
   $('.hero-slider').slick({
     prevArrow:
       '<button id="prev" type="button" class="arrow-btn "><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
@@ -33,5 +31,3 @@ const carousel = ($) => {
     touchThreshold: 500,
   });
 };
-
-export default carousel;

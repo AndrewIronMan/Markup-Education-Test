@@ -1,14 +1,11 @@
 ﻿.integration {
-  background-color: #f4f5f9;
+  background-color: var(--color-primary-white);
   padding-bottom: 140px;
 }
 .flex-container {
   display:flex;
-  // display: grid;
-  // grid-template-columns: repeat(5, 1fr);
   flex-wrap: wrap;
   justify-content: space-around;
-  // grid-gap: 30px;
   .bg-img {
     filter: grayscale(100%);
     mix-blend-mode: multiply;
